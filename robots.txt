@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /page
+Disallow: /archives 
+Allow: *.js
+Allow: *.css
+
+
+Sitemap: https://alinn.mynet.tw/sitemap.xml
