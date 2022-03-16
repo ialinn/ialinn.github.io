@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ARK:解決單機版顯示Fatal error的錯誤視窗 | Alinn．繪本</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="正當本機的遊戲記錄檔載入進度後，ARK遊戲主程式直接閃退並馬上跳出 The UE4-ShooterGame Game has crashed and will close 的視窗對話，顯示 Fatal error !（致命錯誤）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARK:解決單機版顯示Fatal error的錯誤視窗">
+<meta property="og:url" content="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/">
+<meta property="og:site_name" content="Alinn．繪本">
+<meta property="og:description" content="正當本機的遊戲記錄檔載入進度後，ARK遊戲主程式直接閃退並馬上跳出 The UE4-ShooterGame Game has crashed and will close 的視窗對話，顯示 Fatal error !（致命錯誤）">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK-theUE4.jpg">
+<meta property="og:image" content="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK002.jpg">
+<meta property="og:image" content="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK003.jpg">
+<meta property="article:published_time" content="2020-08-24T07:31:01.000Z">
+<meta property="article:modified_time" content="2020-08-24T07:31:01.000Z">
+<meta property="article:author" content="Alinn">
+<meta property="article:tag" content="Steam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK-theUE4.jpg">
+<meta name="twitter:creator" content="@ialinn">
+  <link rel="alternative" href="https://feeds.feedburner.com/alinn" title="Alinn．繪本" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/favicon.png">
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Alinn．繪本</a></h1>
+  <h2><a href="/">不按牌理出牌的規則，新發現才有寫的動力</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/twitter">Twitter</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/photos">Photos</a></li>
+    
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2020-08-24T07:31:01.000Z"><a href="/ARK-解決單機版顯示-Fatal-error的錯誤視窗/">2020-08-24</a></time>
+      
+      
+  
+    <h1 class="title">ARK:解決單機版顯示Fatal error的錯誤視窗</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK-theUE4.jpg" alt="Fatal error!" loading="lazy"></p>
+<p>正當本機的遊戲記錄檔載入進度後，ARK遊戲主程式直接閃退並馬上跳出 The UE4-ShooterGame Game has crashed and will close 的視窗對話，顯示 Fatal error !（致命錯誤）</p>
+<br>
+
+ <span id="more"></span>  
+
+<blockquote>
+<p><strong>找不到關鍵的問題點</strong></p>
+</blockquote>
+<p>一開始就是令人摸不著頭緒的突發狀況，先參考討論區教學把Content、SeekFreeContent這兩個資料夾刪除，再驗證遊戲檔案完整性的程序，讀取完又是跳出討人厭的Fatal error視窗對話。</p>
+<p>準備開大絕重新安裝，移除遊戲主程式前，預先Saved資料夾備份起來，多次重新安裝的動作，我不想要多餘的殘檔就使用Revo Uninstaller徹底移除乾淨，然後Saved資料夾原封不動的拷貝還原也是失敗。</p>
+<blockquote>
+<p><strong>Saved資料夾異常</strong></p>
+</blockquote>
+<p>ARK棄置近兩個月後已經抱持著放棄重玩的心態，突然發覺會是自己備份Saved資料夾裡，某部份的文件異常或記錄檔損壞而產生錯誤問題？</p>
+<p>著手比對原始Saved資料夾和舊備份檔案有何不同，加上不知道需要那些記錄檔案，用了笨方法慢慢地把備份檔一個一個拷貝到Saved資料夾，亂槍打鳥中居然成功恢復遊戲載入，但登入到遊戲中記錄卻非常不完全，如人物等級技能正常，恐龍建築全部消失，Google一下找了其它方法才得已解決。</p>
+<blockquote>
+<p><strong>手動還原記錄檔</strong></p>
+</blockquote>
+<p>陸續遇過幾次error的視窗，如像單機版訂閱非官方各模組而無法執行…等，只要還原到前個記錄點都能恢復正常。</p>
+<ul>
+<li>首先打開Steam下存放的ARK遊戲記錄資料夾，以主程式<code>The Island</code>地圖為例，位置是在<br> <code>\steamapps\common\ARK\ShooterGame\Saved\SavedArksLocal</code></li>
+</ul>
+<p> <img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK002.jpg" alt="\steamapps\common\ARK\ShooterGame\Saved\SavedArksLocal" loading="lazy"></p>
+<p>Thelsland.ark  遊戲記錄檔 （本機的遊戲地圖、建築、恐龍…等）</p>
+<p>Thelsland_xx.xx.xxxx_xx.xx.xx.ark  自動備份記錄檔</p>
+<p>TheIsland_AntiCorruptionBackup.bak、TheIsland_NewLaunchBackup.bak  最近兩次自動存檔</p>
+<ul>
+<li>刪除原先<code>Thelsland.ark</code>，找出無法登入接近的時間點。</li>
+<li>直接修改<code>自動備份記錄檔</code>來取代<code>Thelsland.ark</code>，重新啟動ARK即可。</li>
+</ul>
+<br>
+
+
+<p> <img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK003.jpg" alt="驗證遊戲檔案的完整性" loading="lazy"></p>
+<p>先前有參考<a href="https://forum.gamer.com.tw/" target="_blank" rel="noopener external nofollow noreferrer">巴哈哈啦區</a>類似的狀況，提到<a href="https://forum.gamer.com.tw/Co.php?bsn=28423&sn=12954" target="_blank" rel="noopener external nofollow noreferrer">UE4-ShooterGame crash 當機解法</a>的心得。</p>
+<p>如確定是以下兩個資料夾的某些檔案損壞就可以直接刪除，重新驗證遊戲檔案的完整性應該能獲得解決。</p>
+<p><code>\steamapps\common\ARK\ShooterGame\Content</code></p>
+<p><code>\steamapps\common\ARK\ShooterGame\SeekFreeContent</code></p>
+ <br>
+
+
+
+
+<p>// ARK電腦單機版（主機 / 本地）</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/老師沒教的DIY/">老師沒教的DIY</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Steam/">Steam</a>
+  </div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="http://www.google.com.tw" id="cse-search-box">
+    <input type="hidden" name="cx" value="partner-pub-8909353017926476:lc0o2fmuuu2" />
+    <input type="search" name="q" results="0" placeholder="搜尋">
+  </form>
+</div>
+
+
+  
+<div class="widget tag">
+  
+  <ul class="entry">
+  
+    <li><a href="/categories/關於/">+ 關於</a><small>3</small></li>
+  
+    <li><a href="/categories/指數破表/">指數破表</a><small>3</small></li>
+  
+    <li><a href="/categories/玩具潮物/">玩具潮物</a><small>4</small></li>
+  
+    <li><a href="/categories/繪畫練習題/">繪畫練習題</a><small>18</small></li>
+  
+    <li><a href="/categories/老師沒教的DIY/">老師沒教的DIY</a><small>18</small></li>
+  
+    <li><a href="/categories/音樂聽嗑劇院/">音樂聽嗑劇院</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <div class="entry">
+    <a href="/tags/%E5%A1%97%E9%B4%89%E4%BA%94%E5%9B%9B%E4%B8%89/" style="font-size: 20px; color: #f0c">塗鴉五四三</a> <a href="/tags/Steam/" style="font-size: 9px; color: #39c">Steam</a> <a href="/tags/%E5%8D%B0%E8%A1%A8%E6%A9%9F/" style="font-size: 17.8px; color: #d61fcc">印表機</a> <a href="/tags/%E9%80%B1%E9%82%8A/" style="font-size: 15.6px; color: #ad3dcc">週邊</a> <a href="/tags/%E9%8D%B5%E7%9B%A4/" style="font-size: 11.2px; color: #5c7acc">鍵盤</a> <a href="/tags/%E8%BB%9F%E9%AB%94/" style="font-size: 15.6px; color: #ad3dcc">軟體</a> <a href="/tags/APP/" style="font-size: 9px; color: #39c">APP</a> <a href="/tags/%E9%9F%B3%E6%A8%82%E5%8A%87/" style="font-size: 13.4px; color: #855ccc">音樂劇</a> <a href="/tags/Blog/" style="font-size: 11.2px; color: #5c7acc">Blog</a> <a href="/tags/%E7%B6%B2%E8%B7%AF/" style="font-size: 9px; color: #39c">網路</a> <a href="/tags/Wacom/" style="font-size: 13.4px; color: #855ccc">Wacom</a> <a href="/tags/%E4%BC%BC%E9%A1%8F%E7%B9%AA/" style="font-size: 15.6px; color: #ad3dcc">似顏繪</a> <a href="/tags/%E9%AC%BC%E5%B3%B6%E6%97%A5%E5%B8%B8/" style="font-size: 9px; color: #39c">鬼島日常</a> <a href="/tags/NG/" style="font-size: 13.4px; color: #855ccc">NG</a>
+    </div>
+  </div>
+
+
+
+  <div class="widget tag">
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- RWD ads sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8909353017926476"
+     data-ad-slot="2627622104"
+     data-ad-format="vertical, rectangle"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner" >&emsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://feeds.feedburner.com/alinn"><img src="/img/icon/RSS.png" width="18px" height="18px" alt="RSS" ></a>&emsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://twitter.com/ialinn"><img src="/img/icon/Twitter.png" width="18px" height="18px" alt="Twitter" ></a><div class="alignleft">
+  
+  &copy; 2022 Alinn．繪本
+  
+</div>
+<br>
+<div class="clearfix">Powered by <a href="http://hexo.io/" rel="external nofollow noreferrer" target="_blank">Hexo</a> | Website by <a href="https://mynet.tw/" target="_blank">MyNet</a> </div>
+</footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+  <script type="text/javascript">
+  var disqus_shortname = 'alinn';
+    var disqus_config = function() {
+      this.page.url = 'https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/';
+      this.page.identifier = 'ARK-解決單機版顯示-Fatal-error的錯誤視窗/';
+      this.page.title = 'ARK:解決單機版顯示Fatal error的錯誤視窗';
+    };
+  function loadDisqus() {  //新增的loadDisqus()函數
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+  }  //到此為止將這段程式碼包起來
+  //底下程式碼為新增功能，整段複製貼上即可
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot =
+      (runningOnBrowser && !("onscroll" in window)) ||
+      (typeof navigator !== "undefined" &&
+          /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(
+              navigator.userAgent
+          ));
+  var supportsIntersectionObserver =
+      runningOnBrowser && "IntersectionObserver" in window;
+  setTimeout(function() {
+      if (!isBot && supportsIntersectionObserver) {
+          var disqus_observer = new IntersectionObserver(
+              function(entries) {
+                  if (entries[0].isIntersecting) {
+                      loadDisqus();
+                      disqus_observer.disconnect();
+                  }
+              },
+              { threshold: [0] }
+          );
+          disqus_observer.observe(document.getElementById("disqus_thread"));
+      } else {
+          loadDisqus();
+      }
+  }, 1);
+  </script>
+  
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

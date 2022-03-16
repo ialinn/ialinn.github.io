@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Alinn．繪本</title>
+  
+  <subtitle>不按牌理出牌的規則，新發現才有寫的動力</subtitle>
+  <link href="https://alinn.mynet.tw/atom.xml" rel="self"/>
+  
+  <link href="https://alinn.mynet.tw/"/>
+  <updated>2020-08-24T07:31:01.000Z</updated>
+  <id>https://alinn.mynet.tw/</id>
+  
+  <author>
+    <name>Alinn</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARK:解決單機版顯示Fatal error的錯誤視窗</title>
+    <link href="https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/"/>
+    <id>https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/</id>
+    <published>2020-08-24T07:31:01.000Z</published>
+    <updated>2020-08-24T07:31:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK-theUE4.jpg" alt="Fatal error!" loading="lazy"></p><p>正當本機的遊戲記錄檔載入進度後，ARK遊戲主程式直接閃退並馬上跳出 The UE4-ShooterGame Game has crashed and will close 的視窗對話，顯示 Fatal error !（致命錯誤）</p><br> <span id="more"></span>  <blockquote><p><strong>找不到關鍵的問題點</strong></p></blockquote><p>一開始就是令人摸不著頭緒的突發狀況，先參考討論區教學把Content、SeekFreeContent這兩個資料夾刪除，再驗證遊戲檔案完整性的程序，讀取完又是跳出討人厭的Fatal error視窗對話。</p><p>準備開大絕重新安裝，移除遊戲主程式前，預先Saved資料夾備份起來，多次重新安裝的動作，我不想要多餘的殘檔就使用Revo Uninstaller徹底移除乾淨，然後Saved資料夾原封不動的拷貝還原也是失敗。</p><blockquote><p><strong>Saved資料夾異常</strong></p></blockquote><p>ARK棄置近兩個月後已經抱持著放棄重玩的心態，突然發覺會是自己備份Saved資料夾裡，某部份的文件異常或記錄檔損壞而產生錯誤問題？</p><p>著手比對原始Saved資料夾和舊備份檔案有何不同，加上不知道需要那些記錄檔案，用了笨方法慢慢地把備份檔一個一個拷貝到Saved資料夾，亂槍打鳥中居然成功恢復遊戲載入，但登入到遊戲中記錄卻非常不完全，如人物等級技能正常，恐龍建築全部消失，Google一下找了其它方法才得已解決。</p><blockquote><p><strong>手動還原記錄檔</strong></p></blockquote><p>陸續遇過幾次error的視窗，如像單機版訂閱非官方各模組而無法執行…等，只要還原到前個記錄點都能恢復正常。</p><ul><li>首先打開Steam下存放的ARK遊戲記錄資料夾，以主程式<code>The Island</code>地圖為例，位置是在<br> <code>\steamapps\common\ARK\ShooterGame\Saved\SavedArksLocal</code></li></ul><p> <img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK002.jpg" alt="\steamapps\common\ARK\ShooterGame\Saved\SavedArksLocal" loading="lazy"></p><p>Thelsland.ark  遊戲記錄檔 （本機的遊戲地圖、建築、恐龍…等）</p><p>Thelsland_xx.xx.xxxx_xx.xx.xx.ark  自動備份記錄檔</p><p>TheIsland_AntiCorruptionBackup.bak、TheIsland_NewLaunchBackup.bak  最近兩次自動存檔</p><ul><li>刪除原先<code>Thelsland.ark</code>，找出無法登入接近的時間點。</li><li>直接修改<code>自動備份記錄檔</code>來取代<code>Thelsland.ark</code>，重新啟動ARK即可。</li></ul><br><p> <img src="/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK003.jpg" alt="驗證遊戲檔案的完整性" loading="lazy"></p><p>先前有參考<a href="https://forum.gamer.com.tw/" target="_blank" rel="noopener">巴哈哈啦區</a>類似的狀況，提到<a href="https://forum.gamer.com.tw/Co.php?bsn=28423&sn=12954" target="_blank" rel="noopener">UE4-ShooterGame crash 當機解法</a>的心得。</p><p>如確定是以下兩個資料夾的某些檔案損壞就可以直接刪除，重新驗證遊戲檔案的完整性應該能獲得解決。</p><p><code>\steamapps\common\ARK\ShooterGame\Content</code></p><p><code>\steamapps\common\ARK\ShooterGame\SeekFreeContent</code></p> <br><p>// ARK電腦單機版（主機 / 本地）</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/ARK-theUE4.jpg&quot; alt=&quot;Fatal error!&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;正當本機的遊戲記錄檔載入進度後，ARK遊戲主程式直接閃退並馬上跳出 The UE4-ShooterGame Game has crashed and will close 的視窗對話，顯示 Fatal error !（致命錯誤）&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="老師沒教的DIY" scheme="https://alinn.mynet.tw/categories/%E8%80%81%E5%B8%AB%E6%B2%92%E6%95%99%E7%9A%84DIY/"/>
+    
+    
+    <category term="Steam" scheme="https://alinn.mynet.tw/tags/Steam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>與飛碟FT-1000BS不來電的經驗</title>
+    <link href="https://alinn.mynet.tw/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/"/>
+    <id>https://alinn.mynet.tw/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/</id>
+    <published>2018-01-25T16:50:43.000Z</published>
+    <updated>2018-01-25T16:50:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/IMAG0085.jpg" loading="lazy"><br>這憨憨的微笑，想分享2016-2017年與我不來電UPS的經驗和過程。</p><p>身處在電力不穩城市之一，早早就有備用電力來保護自己電腦設備的概念，絕對沒想過機器可以用來互相傷害。</p><p>因自己疏忽加上網購遇到不良的電池商疑似賣二手品或庫存許久的電池，APC在2016年心律不整（疑似繼電器掛了）光榮退休，一時難以接受APC離逝和大漲價的打擊。與管理人討論過接替APC的機型，有上網搜尋看過各家UPS評價和優缺點，想給台廠一次機會的想法，便從幾家台廠UPS清單選中飛碟，萬萬沒想過這才是噩夢的開端。</p><span id="more"></span><p>先說明一下之前使用 APC BR-1000TW 的狀況：</p><ul><li>APC監控軟體安裝正常。</li><li>從未送修APC本主機及包含電腦的電源供應器。</li><li>拔除APC電源插頭從來沒有出現滿載異常警示（想拔除幾次是正常）。</li><li>沒遇過跳電無法切換電池供電，電腦從沒無預警斷電的問題。</li><li>擋下所有大大小小的跳電、斷電、大停電，百分之百持續供電。</li><li>提供電腦週邊電量，保守估計大約近25分鐘電力。</li><li>可自行DIY更換兩顆12V7AH電池（非特規）。</li></ul><p><strong>規格比較</strong></p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/APC_BR1000TW.jpg" loading="lazy"><br>找到當時2008年APC BR-1000TW規格，600W，模擬正弦波，在線互動式（APC還未被施耐德電機收購）</p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/FT-1000BS-UPS.jpg" loading="lazy"><br>2016年購物中心貼的飛碟FT-1000BS規格，600W，模擬正弦波，在線互動式</p><blockquote><p><strong>ViewPower監控軟體</strong></p></blockquote><p>空機測試一切正常才正式啟用，正巧作業系統從WIN7升到WIN10，飛碟是採用ViewPower第三方監控軟體。</p><p>首次安裝遇上麻煩Flash和Java已更新後無法啟用軟體的窘境，大概花了兩三天都在找問題，不管是飛碟官網提供WIN10版本或光碟的程式通通無法使用，直到搜尋到找上德國UPS廠商提供版本才解決監控程式，沒過幾個月WIN10重大更新後，監控程式圖示原本長駐在WIN10右下角突然某日消失，重新安裝先前版本就是不能啟動，浪費時間更新卻找不出問題，最後死馬當活馬醫，直接到飛碟官網下載WIN10版本監控軟體居然能用，下回是不是又莫名其妙遇到鬼打牆狀況，以後會排除Flash和Java型態軟體的產品非常麻煩，一整個反感。</p><blockquote><p><strong>使用狀況</strong></p></blockquote><p>2016年5月自從換上飛碟FT-1000BS（簡稱 FT）中間遇到電腦的電源供應器（簡稱PSU，依序A-D編號）自行送修兩次和更換全新兩顆PSU超快記錄。</p><p><strong>事故一</strong></p><ul><li><p>第一次遇上A牌PSU因跳電無法切換FT電池供電直接無預警的關機，幸好電腦可正常開機，加上我認為原本電源供應器已老舊，可能是自己電腦設備關係，從沒懷疑過FT，未送修。</p></li><li><p>第二次地區性大停電，相同關機狀況又來了，這回復電後不同的是發現電腦沒辦法正常開機，一直不過電差點以為是主機板出事，嚇得我找出家中已淘汰非常久且古老的B牌PSU來測試，搞了滿頭大汗，反覆拆了又裝，莫名其妙的儀式才讓電腦重新回神開機，但A牌PSU也因第二次大停電故障得送修，幸運的是這顆有終身保固的原因，才得以免費維修復活（轉手，至2018年A牌PSU正常運作）。</p></li></ul><p>不禁懷疑，這是一台憑靠運氣切換電池供電的機器，成功機率也太低，明明電力一直是充飽100%狀態，只接主機和螢幕、HiNET數據機，負載量才41%左右跳動未滿載，有時人為故意弄出像停電的狀況，拔除FT電源插頭放電測試機器是否正常，偶爾會出現高音頻警示嗶嗶聲當機，LCD小螢幕顯示F01機率太高了，一直覺得不可能是巧合。不管如何，這台不來電的FT直覺就是要回廠送修。</p><p>才使用三個月，監控軟體使用內定值未調整其它數值，看見出現UPS過溫報警、UPS故障、UPS電池低電位的事件，不送修沒辦法安心。</p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/ups2.jpg" loading="lazy"></p><p>分公司的維修工程師收到寄出的UPS便來電詢問狀況，順便糾正我檢測的行為，不能間隔約5分鐘拔除UPS電源插頭造成突然斷電，大概密集性拔除插頭斷電三次被視為惡意不友善的行為，難道台電無預警幾次瞬間跳電還會溫馨提前通知用戶嗎？如果機器是好的、切換供電功能正常，不出現該死的負載F01，根本沒必要去擔心機器被操壞。</p><p>不斷電系統就是電源中斷時可即時供應備用電力的產品。（攤手）</p><p><strong>事故二</strong></p><ul><li>第三次2017年8月遇上全台大停電，為了預防事故再次發生，購入全新C牌PSU，先排除老舊的電源供應器影響造成異常關機，FT先前已經送回原廠測試也正常切換供電可放心，就算停電正好測試FT性能，正當FT終於遇上台電正式停電，總算有了自動切換到100%電池供電的能力，讓我真的開心，但樂極生悲的是只有約十秒電力無法撐到存檔關機時間的供電，這十秒完全傻眼派不上用場，加上斷電後高音嗶嗶慘叫不停還關不掉惱人的音頻，LCD小螢幕又是顯示可惡的F01，這次大停電造成電腦失神幾個小時無法開機，二度再請出古老B牌PSU使用神秘的反覆拔插儀式來救援，重點是我的全新C牌PSU確定無法通電居然故障又得送修。</li></ul><p>在此8月大停電前，有段期間沒遇過台電的跳電或停電，正常使用下全新的C牌PSU卻有時無故斷電，造成無預警電腦關機的情況，這斷電問題不知是誰造成並沒想太多也不想亂猜，只想到負載量盡量控制在42%，千萬別出現F01，接上FT本機只剩下主機和螢幕，幾乎可說已排除高耗電設備。</p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/ups.jpg" loading="lazy"></p><p>每次事故後，拔除FT插頭做放電「<strong>預演時</strong>」都是「<strong>正常</strong>」切換電池供電，當台電「<strong>正式臨時</strong>」跳電、停電那刻就是「<strong>不運作</strong>」這是哪招呀！總是沒有在對的時機發揮功用，到現在還是無法理解，為何停電後電源供應器都剛好、巧合、碰巧的故障？</p><p>已排除所有可能性，能換都換，老實說沒有一天不懷疑FT是不是偽裝成大型穩壓的延長線插座，根本沒發揮不斷電系統該有的延長電力供應，真的再也沒辦法忍受正式停電不來電的問題，非常無言寫信給飛碟客服抱怨，鐵了心決定要第二次送修。</p><p>送修隔幾天，怒買一台APC和業界口碑最好的D牌PSU，一連串下來都不知該說什麼才好。（苦笑）</p><blockquote><p><strong>解決方案</strong></p></blockquote><p>第二次送修與客服溝通過程有反應要求退貨退款，對方明確告知FT-1000BS已用了一年多沒辦法退貨，客服有認真去詢問送修單位並且已在第一次換過新機板，詢問我的意見更換一台舊款非上市機種的整新小白FT-1000B的備機700W試用，無奈接受算是折衷的解決辦法，保證更換後機器供電正常。</p><p>小白FT-1000B事前有先做過拔除插頭放電測試，切換電池供電正常，提供電腦約10分鐘電力，相信機器應該是好的，在四個月內遲遲等待不到台電正式停電或跳電的狀況便宣告終止停用，還是無法信任小白機戰力，我想念APC老戰友。</p><p>客服有提過FT-1000BS規格寫法讓人誤會再修正，我反而更在意關鍵12V7AH兩顆串聯才有600W的提醒，小白FT-1000B這孩子怎麼看都不像擁有700W，三不五時會想起客服說法卻又不解，2017年8月GOOGLE發現FT-1000BS官方規格已從600W變成480W，中間還有500W寫法，加上沒拆過FT-1000BS，到底內裝是12V7AH還是12V9AH的電池，官方粉專小編都寫12V9AH回應，這對我來說已成謎了並不重要。</p><p><strong>嚴重是如果2016年一開始規格只有480W卻標示到600W，這樣已構成商品規格標示不實欺騙消費者。</strong></p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/FT-1000B-12v7ah.jpg" loading="lazy"><br>2018年1月頭一回拆了小白FT-1000B看到內部結構，讓我震驚到居然只有12V7AH x 1顆電池，此小白非上市那款小白同為1000B較迷你機型，客服強調是700W其中必有誤會，再回頭看看APC BR-1000TW x2顆串聯也才600W，有點恍然大悟怎麼想FT-1000BS比較像先天性設計不良，只差別純正弦波和模擬正弦波，不然這台小白FT-1000B備機到底用了什麼黑科技搭配一顆廣隆電池12V7AH性能比上市FT-1000BS搭12V9AH只有600W（？）還強大。</p><p>是不太懂廠商的話術和邏輯？</p><ul><li><strong>FT-1000BS–12V9AH x1顆=600W&gt;500W&gt;480W（！）</strong></li><li><strong>FT-1000B—12V7AH x1顆=700W（？）</strong></li></ul><blockquote><p><strong>補充</strong></p></blockquote><p>這段是2017年8月客服電話解釋如果出現顯示F01？</p><p>大部份是負載產生瞬間的高載造成，你的電腦可能有「主動功率因素校正」的功能或動作，在線互動式就在即將斷電或即將放電之間是沒辦法工作，發生F01請加大容量使用。</p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/FT-1000BS-APFC.jpg" loading="lazy"></p><p>2018年才發現P家購物已加註APFC（主動式功率因素校正）電源供應器說明，它這說明正好符合2017年8月客服回覆給我，斷電不供電的解釋。2016年購物中心規格根本沒有標示和提醒FT-1000BS有APFC不適用說明，今天廠商如果標示規格確實，消費者是完全可以避開，直接排除有APFC限制的UPS機種。</p><p>2008年家中購入第一台APC BR-1000TW，這款早已停產多時也根本沒任何相容性問題，使用上從未遇過有APFC設計電源供應器造成不供電或過載的問題，即使老舊的規格，2008年到現在都還是正常服役中。</p><p>再說電源供應器就是電腦主要元件，現在主流幾乎普遍性早就加入APFC設計，市面上的電源供應器保守估計至少九成都有APFC設計，要符合被動式PFC設計要挑選真的沒幾台，等於全部不適用，況且APFC並不是現在突然蹦出來的新技術，怎麼還特別去強調APFC適不適用來打臉自家產品，週邊開發商本來就要跟隨主流特性去設計製造，不該把立場給顛倒。</p><p>試問，一台不適用全部市售電源供應器的UPS產品，幾乎可以說要下架或停產，是否該檢討產品已過時或需要升級，別讓家用UPS的一般消費者造成極大困擾。</p><blockquote><p><strong>結論</strong></p></blockquote><p>2016年購買的FT-1000BS，一開始就是飛碟官方自己標示商品規格不實，誤導消費者選擇到不符合自己電腦需求的產品，選擇錯誤到底是誰的問題？</p><p>雖然客服和工程師真的非常有心想解決產品問題，我在客服信或電話中都只針對FT-1000BS不供電問題，並沒有刻意去提及說電腦週邊損壞，2016-2017年的當時都自認是電腦設備老舊因素造成，現在已不想探討原因。2018年5月過保已打算自行吞下去，對這種規格不實的產品真的難以消化成了白老鼠還不自覺的測試，遇過一次就飽了沒有下次。</p><p><img src="/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/IMAG0077.jpg" loading="lazy"><br>整理及回顧事件後才驚見FT-1000BS本體早就有張「勸世貼紙」，是的！當初我沒有慧根領悟不出貼紙上真正涵意的文字，現在懂了。</p><blockquote><p>警告使用者：<br>熟知本產品的夥伴們，這是一種限制性銷售的產品，因此這個產品的安裝可能會被要求做一些限制或採取其他的手段以防止干擾的發生。</p></blockquote><p>以上是2016-2017年付出的代價和經驗，日前已換回APC。</p><h4 id="APC價值，我懂。"><a href="#APC價值，我懂。" class="headerlink" title="APC價值，我懂。"></a><strong>APC價值，我懂。</strong></h4><br><p>// 一年間遇害3次，斷電無法計算<br>// 產品沒檢討沒改善沒改進依舊沒作用</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/%E8%88%87%E9%A3%9B%E7%A2%9FFT-1000BS%E4%B8%8D%E4%BE%86%E9%9B%BB%E7%9A%84%E7%B6%93%E9%A9%97/IMAG0085.jpg&quot; loading=&quot;lazy&quot;&gt;&lt;br&gt;這憨憨的微笑，想分享2016-2017年與我不來電UPS的經驗和過程。&lt;/p&gt;
+&lt;p&gt;身處在電力不穩城市之一，早早就有備用電力來保護自己電腦設備的概念，絕對沒想過機器可以用來互相傷害。&lt;/p&gt;
+&lt;p&gt;因自己疏忽加上網購遇到不良的電池商疑似賣二手品或庫存許久的電池，APC在2016年心律不整（疑似繼電器掛了）光榮退休，一時難以接受APC離逝和大漲價的打擊。與管理人討論過接替APC的機型，有上網搜尋看過各家UPS評價和優缺點，想給台廠一次機會的想法，便從幾家台廠UPS清單選中飛碟，萬萬沒想過這才是噩夢的開端。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="指數破表" scheme="https://alinn.mynet.tw/categories/%E6%8C%87%E6%95%B8%E7%A0%B4%E8%A1%A8/"/>
+    
+    
+    <category term="NG" scheme="https://alinn.mynet.tw/tags/NG/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KOBO APP Server Error錯誤訊息任務</title>
+    <link href="https://alinn.mynet.tw/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/"/>
+    <id>https://alinn.mynet.tw/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/</id>
+    <published>2017-11-11T03:11:11.000Z</published>
+    <updated>2017-11-11T03:11:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/KOBO_APP.jpg" loading="lazy"></p><p>透過<code>樂天ID</code>以優惠價試買一本電子書，還沒閱讀前先發觸得到「Server Error in ‘/‘ Application.」的任務。</p><p>翻閱過官方指南文件進行APP故障排除的操作，完全解除不了任務便向官方提報了BUG，這回不知道是我表達文意不夠精準或者是表達錯誤，還是根本找錯NPC，到目前為止，開始起頭都是以事件來描述先讓對方能了解我遭遇到什麼困難，便以詢問事件的標題作結尾，通常客服都非常快速能給出一個解決方案。</p><p>我依然按照萬年不變的寫法，請求KOBO客服線上協助，隨機遇到攻擊力和命中數值極低的客服，首度攻擊問題核心是完全沒傷害值，我的A事件任務完全是卡關無法前進，客服不斷貼心提醒又亂點技能樹，讓人感到一股技能亂放的隨意，原因出自於我不小心沒事偷渡另一條分線任務KOBO帳號連結錯誤的詢問，此後系統信不斷回報客服又衍生出B技能及C技能，趁著技能樹未進化到D技能前，我趕緊重新檢視並整理所有的問題清楚列舉我的A事件任務原點，建議即將快要暴走的客服快回報給工程師，最起碼有更換另位客服的機會。（喂）</p><span id="more"></span><p>列舉我的錯誤：</p><ul><li>記得回報異常帳號的ID 或 電子信箱（不然會玩壞NPC）</li><li>請單一詢問錯誤主事件，勿偷渡第二分線事件（一定會玩壞NPC）</li><li>勿用（正常ID）去反應或突顯（異常ID）問題（可能會玩壞NPC）</li><li>不要試著解釋和建議（一樣會玩壞NPC）</li></ul><br><blockquote><p><strong>KOBO 網頁線上聯絡客服表單開始</strong></p></blockquote><p>因客服表單已有試過<code>樂天ID</code>填寫會員帳號信箱，但按下傳送完全行不通，網站回傳的小視窗寫著只接受KOBO會員註冊帳號信箱，設定像是被限制，誤以為KOBO和樂天兩大平台分開管理，還是說異常中的<code>樂天ID</code>沒有權利去發問，最後解決的辦法重新註冊一個帳號才有發言權限。</p><p>客服沒有再次確認帳號信箱便直接用發文者的電子信箱查詢，猜想系統應該沒顯示是KOBO或樂天，所以客服還能耐著性子解釋說明，不管使用哪個平台通通都是叫「樂天帳號」，分為新和舊帳號不能互相連結。</p><ul><li>舊會員帳號／有樂天ID：同KOBO帳號，相通各個集團直接登入。</li><li>新會員帳號／沒有樂天ID：直接申請KOBO帳號，還多送樂天ID，KOBO等於樂天市場的新會員。（最划算）</li></ul><p><img src="/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/KOBO_003.jpg" loading="lazy"></p><p>綜合以上，KOBO網頁看來「我的KOBO帳戶&gt;連結此帳戶」就顯得多餘且無用的<code>HTML &lt;Link&gt;</code>標籤，這標籤並不是記錄使用KOBO帳戶的電子信箱，讓人誤會是<code>Facebook</code>和<code>Twitter</code>的關係可以互相連結，真是沒邏輯性，結論：</p><p><strong>我根本就是被KOBO網站和<code>HTML &lt;Link&gt;</code>標籤給誤（ㄅㄧㄠˇ）導（ㄌㄜ˙）。</strong></p><p>誰知道第一步就踩地雷自爆，客服已說（樂天ID=KOBO）同樂天帳號相通，想先從測試KOBO連結帳號是否正常可完全放棄了。<code>Facebook</code>早已連結成功卻不曾使用過，沒懷疑會有異常，完全不打算浪費時間來測試與對照，但客服從頭到尾自認為這就是新舊帳號所產生錯誤息訊的問題，並朝著這方向前進。</p><p>我開始感到非常疑惑，客服也見過兩張錯誤訊息的擷圖，怎麼沒先排除比較嚴重的主線，個性使然下又才展開第二步測試社群帳號<code>Facebook</code>登入，連結<code>樂天ID</code>後，驗證下得到相同結果，畫面依舊顯示：</p><p><strong>「抱歉，無法識別您的電子郵件帳戶。請造訪 Kobo 網站以完成註冊。」</strong></p><p>根本沒有說好的傳送點，結果，依舊卡在KOBO網站登入的畫面，兩者非樂天集團（樂天ID≠Facebook）也非相通的帳號，為什麼還是一樣無法登入的錯誤畫面，猜想應該帳號異常或其它原因影響無法讀取才造成BUG，以往我回報經驗有類似障礙，感覺有點相關有反應給客服了解，或許可成為線索也說不定，但客服無視一直朝著新舊帳號和基本同步說明繼續兵推，增生同帳號不能合併點。</p><p><img src="/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/KOBO_001.jpg" loading="lazy"></p><p>好吧！假設要合併帳號問題，我個人偏向直接按「停用帳戶」的邏輯會不會比較好。</p><p>我想求助於客服幫忙解決排除是在KOBO APP所有版本在同步和瀏覽功能這塊反常，商店首頁或同步書籍頁讀取馬上觸發錯誤訊息，明顯就是之間環節出現異常無法傳送到下一張地圖的點，並不是要客服來回應如何操作說明，討論觀點完全不一致。</p><p>總而言之，我大概被視為聽不懂人話的外星人，這個新舊帳號的點變成客服不斷跳針和鬼打牆的地方。</p><br><blockquote><p><strong>自己的帳號自己救、自己的任務自己解</strong></p></blockquote><p>當下重新編寫想傳遞的內容，我也Google查詢了「Server Error in ‘/‘ Application.」錯誤訊息名詞，英文單字其實有點透露出元凶，一步一步把客服拉回任務主路線。在傳送A事件前已修飾刪除那些不屬於問題的贅詞，但還是無法避免有一點情緒上的用詞，也盡可能測試來驗證結果，回覆給客服的問題並沒有偏離主題一直著墨在<code>樂天ID</code>異常，真希望客服能否直接快狠準的攻擊命中，只想解決這討人厭的BUG小怪。</p><p>A事件的後續，不知道是否有更換客服，突然的反應和處理比較有以往熟悉的SOP，首要幫忙先重啟帳號，後續狀況再處理，當再收到通知已經是順利破關。</p><p>「Server Error in ‘/‘ Application.」畫面隨即消失，首頁一點一點讀取，當進度條完成後立刻被傳送到全新的地圖中，展開全新探索。</p><p><img src="/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/KOBO_APP01.jpg" loading="lazy"></p><p>這任務時間前後卡關也跑了快一個星期，不然前兩封回覆已經是夠讓人白眼翻到最高點，大概這回我忘記告知萬用的通關密語。（喂）</p><p><strong>請客服回報給工程師處理 / 測試，謝謝 。</strong></p><p>//感謝你／妳協助<br>//一段非常有趣且令人印象深刻的觸發任務</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/KOBO-APP-Server-Error-%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E4%BB%BB%E5%8B%99/KOBO_APP.jpg&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;透過&lt;code&gt;樂天ID&lt;/code&gt;以優惠價試買一本電子書，還沒閱讀前先發觸得到「Server Error in ‘/‘ Application.」的任務。&lt;/p&gt;
+&lt;p&gt;翻閱過官方指南文件進行APP故障排除的操作，完全解除不了任務便向官方提報了BUG，這回不知道是我表達文意不夠精準或者是表達錯誤，還是根本找錯NPC，到目前為止，開始起頭都是以事件來描述先讓對方能了解我遭遇到什麼困難，便以詢問事件的標題作結尾，通常客服都非常快速能給出一個解決方案。&lt;/p&gt;
+&lt;p&gt;我依然按照萬年不變的寫法，請求KOBO客服線上協助，隨機遇到攻擊力和命中數值極低的客服，首度攻擊問題核心是完全沒傷害值，我的A事件任務完全是卡關無法前進，客服不斷貼心提醒又亂點技能樹，讓人感到一股技能亂放的隨意，原因出自於我不小心沒事偷渡另一條分線任務KOBO帳號連結錯誤的詢問，此後系統信不斷回報客服又衍生出B技能及C技能，趁著技能樹未進化到D技能前，我趕緊重新檢視並整理所有的問題清楚列舉我的A事件任務原點，建議即將快要暴走的客服快回報給工程師，最起碼有更換另位客服的機會。（喂）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="老師沒教的DIY" scheme="https://alinn.mynet.tw/categories/%E8%80%81%E5%B8%AB%E6%B2%92%E6%95%99%E7%9A%84DIY/"/>
+    
+    
+    <category term="APP" scheme="https://alinn.mynet.tw/tags/APP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter User盜用信箱事件</title>
+    <link href="https://alinn.mynet.tw/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/"/>
+    <id>https://alinn.mynet.tw/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/</id>
+    <published>2017-01-21T02:50:01.000Z</published>
+    <updated>2017-01-21T02:50:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>起源於2013年某月，我想加入Twitter卻不得其門而入，系統一直提示此電子郵件已經註冊，當下我也是滿頭問號，該不會自己早有帳號只是我忘記，既然已有註冊也立刻去查詢被遺忘的密碼，但Twitter系統就像123木頭人完全沒動靜，真的是鬼打牆太多次一直收不到密碼郵件，不得已只好放棄改用其它的備用信箱申請。</p><p><img src="/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/Twitter0001.JPG" alt="俄文版" loading="lazy"></p><p>終於，隔了一個月後莫名其妙收到Twitter的俄文版修改密碼信件，取回密碼後登入發現2011年7月帳號已存在，還疑似被戰鬥民族使用，再瞄到最初申請的User，IP位置是在於香港，不禁想起網路駭客攻擊Twitter新聞，證實Twitter曾遭遇駭客攻擊過的痕跡，有可能是被駭客攻擊下的受害者帳號，不使用直接廢棄，最後在網路信箱名單亂找個電子信箱在管理後台Key上，這也是我從沒被信箱通知的原因。（亂猜）</p><p>看到<a href="https://forum.gamer.com.tw/" target="_blank" rel="noopener">巴哈哈啦區</a>有篇提及<a href="https://forum.gamer.com.tw/Co.php?bsn=23805&sn=120434" target="_blank" rel="noopener">Twitter帳號被停權</a>的教學文，是的！我要先解除停權鎖定的封印才能下一步。</p><span id="more"></span><p>其實繞了這麼大一圈，想想為什麼要去跟Twitter解釋被人盗用電子郵件的理由，只要解除暫時停權帳號再自己刪除，換作當時取回密碼就不必繞這麼多路。</p><ul><li><p>首先，先登入已被<code>Twitter停權帳號</code>。</p></li><li><p>點入<a href="http://support.twitter.com/forms/general?subtopic=suspended" target="_blank" rel="noopener">http://support.twitter.com/forms/general?subtopic=suspended</a> 利用表單提出帳號被停權或鎖定申請。<br>將<code>stuvwxyz巴友</code>所示範英文版申訴內文複製到<code>Description of problem</code>問題描述欄。<br><strong>hi, my account is currently suspended by twitter.and I have no idea why my account was suspended,I did NOT have any violation of the Twitter Rules.<br>PLEASE take another look at my case.I would like to have my account reactivated. thank you!</strong></p></li><li><p>其它請填入真實資料後按下傳送（SUBMIT），官方系統會自動回覆郵件。<br><strong>Case# 申訴號碼: Appealing an account suspension - @使用者名稱</strong></p></li><li><p>請必務在該<code>Case#申訴號碼</code>郵件回覆，再確認電子信箱為申訴者使用。<br><strong>回覆內容可再貼申訴內文，也可簡單回應 account is 使用者名稱等之類。</strong></p></li></ul><p>只寄了一次申訴約兩個工作日後，審查通過Twitter便會回覆通知告訴此帳號已解除停用、鎖定狀態，准許帳號可繼續使用的訊息。</p><p><img src="/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/Twitter0003.JPG" alt="已審查通過" loading="lazy"></p><p>先前錯誤想法是：</p><ul><li>把User搞到被系統停權暫時封鎖無法發文。</li><li>停權狀態中登入一直不知道有「停用帳號」可以申請帳號永久刪除的選項。</li></ul><p>接著犯下錯誤是，後續試圖去跟Twitter官方說明電子郵件被別人盗用，請求官方刪除帳號等之類，以Twitter審查觀點是User主頁根本沒PO過任何文章看不出被盗用的痕跡，又如何證明電子信箱是被盗用，想當然直接被Twitter退件不受理而失敗。</p><p><img src="/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/Twitter0002.JPG" alt="官方不刪自己砍" loading="lazy"></p><p>再見，倒數30天不登入就永遠消滅。</p><p>提外話：<br>之後我也曾遇過IBM網站突然寄來Mail才知道被註冊，或者，skype被微軟收購後多出來的帳號，直接由使用者自主主動提出申請停用處理。</p><p>//外國網站都有「停用帳號」選項，可主動提出申請<br>//台灣網站有個資保護，刪帳號需要客服處理</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;起源於2013年某月，我想加入Twitter卻不得其門而入，系統一直提示此電子郵件已經註冊，當下我也是滿頭問號，該不會自己早有帳號只是我忘記，既然已有註冊也立刻去查詢被遺忘的密碼，但Twitter系統就像123木頭人完全沒動靜，真的是鬼打牆太多次一直收不到密碼郵件，不得已只好放棄改用其它的備用信箱申請。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Twitter-User%E7%9B%9C%E7%94%A8%E4%BF%A1%E7%AE%B1%E4%BA%8B%E4%BB%B6/Twitter0001.JPG&quot; alt=&quot;俄文版&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;終於，隔了一個月後莫名其妙收到Twitter的俄文版修改密碼信件，取回密碼後登入發現2011年7月帳號已存在，還疑似被戰鬥民族使用，再瞄到最初申請的User，IP位置是在於香港，不禁想起網路駭客攻擊Twitter新聞，證實Twitter曾遭遇駭客攻擊過的痕跡，有可能是被駭客攻擊下的受害者帳號，不使用直接廢棄，最後在網路信箱名單亂找個電子信箱在管理後台Key上，這也是我從沒被信箱通知的原因。（亂猜）&lt;/p&gt;
+&lt;p&gt;看到&lt;a href=&quot;https://forum.gamer.com.tw/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;巴哈哈啦區&lt;/a&gt;有篇提及&lt;a href=&quot;https://forum.gamer.com.tw/Co.php?bsn=23805&amp;sn=120434&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Twitter帳號被停權&lt;/a&gt;的教學文，是的！我要先解除停權鎖定的封印才能下一步。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="老師沒教的DIY" scheme="https://alinn.mynet.tw/categories/%E8%80%81%E5%B8%AB%E6%B2%92%E6%95%99%E7%9A%84DIY/"/>
+    
+    
+    <category term="網路" scheme="https://alinn.mynet.tw/tags/%E7%B6%B2%E8%B7%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關閉立體聲混音設定</title>
+    <link href="https://alinn.mynet.tw/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/"/>
+    <id>https://alinn.mynet.tw/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/</id>
+    <published>2015-10-19T04:23:33.000Z</published>
+    <updated>2015-10-19T04:23:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>RC語音在2019年4月20日已經全部結束所有服務。</strong></p><p>早些年前電腦還是WinXP系統時曾安裝過RC語音都很順利使用，大概是音效管理較為單純，但換成比較新一代ASUS主機板後，安裝瑞昱高傳真音效管理(Realtek)把Win7音效通通整合一起，偏重立體聲混音和麥克風線路合為一線，原先我個人是使用SKYPE和LINE就足夠應對語音通話並沒有發生設定上的困擾，但朋友要求使用RC語音後卻出現一些未知問題。</p><p>以RC語音為例，遇上問題是：</p><ul><li>RC語音已設定自動感應發言無法通話。</li><li>如不啟用混音功能，對方聽不到的聲音，如開啟混音模式，通話中把電腦內部如遊戲、網頁、系統的提示相關聲音，通通強迫傳給對方收聽。</li><li>RC語音的混音模式時，通話雙方會聽到回音，音質輸入不流暢，甚至卡卡停頓類似跳針一般慘叫。</li></ul><p>請示GOOGLE大神和RC官方教學都沒詳細說明如何解決混音模式正確的設定，達人們寫的太專業真的看不懂，只好自己研究先解決能發話問題。</p><span id="more"></span><p>先說明這是有安裝 [瑞昱高傳真音效管理 ] 所適用，如只需要通話語音而不想播放電腦聲音(立體聲混音)，請參考以下。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_002.JPG" loading="lazy"><br>請點入界面右上角的[進階裝置設定]。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_003.JPG" loading="lazy"><br>在[進階裝置設定]中的錄音裝置-&gt;[將所有輸入插孔設為各自獨立的輸入裝置]勾選。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_004.JPG" loading="lazy"><br>管理選單就會把麥克風和電腦輸出線路中的電腦混音各自變成獨立的線路。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_008.JPG" loading="lazy"><br>在[錄製]選單設定把Mic in at front panel 勾選成[預設裝置]。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_006.JPG" loading="lazy"><br>立體聲混音設定為0，保險一點就是喇叭靜音，怕有用到立體聲混音(電腦錄音)才不想把裝置停用。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_009.JPG" loading="lazy"><br>在[播放]選單內容把喇叭勾選成[預設裝置]。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_007.JPG" loading="lazy"><br>因個人有使用耳機關係，為了避免耳機裡的聲音過大，Realtek HD Audio output設定50%以下，麥克風、線路輸入、Front Pink In/Green IN都是設定0，我還沒試驗這四個選項開啟會有什麼影響。</p><p><img src="/%E9%97%9C%E9%96%89%E7%AB%8B%E9%AB%94%E8%81%B2%E6%B7%B7%E9%9F%B3%E8%A8%AD%E5%AE%9A/RaidCall_005.JPG" loading="lazy"><br>如果還想要邊聽音樂邊通話，記得[通訊]設定裡[不要進行活動]勾選，這樣就不影響聲音大小被干擾。</p><p>//RaidCall語音是屬於包廂式房間可自由進出，自己主控當DJ或是語音主播，播放喜歡音樂或是實況分享給其他聽眾，這也是吸引玩家的地方。</p><p>//目前遊戲玩家首推是以<a href="https://discordapp.com/" target="_blank" rel="noopener">Discord</a>來取代。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;RC語音在2019年4月20日已經全部結束所有服務。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;早些年前電腦還是WinXP系統時曾安裝過RC語音都很順利使用，大概是音效管理較為單純，但換成比較新一代ASUS主機板後，安裝瑞昱高傳真音效管理(Realtek)把Win7音效通通整合一起，偏重立體聲混音和麥克風線路合為一線，原先我個人是使用SKYPE和LINE就足夠應對語音通話並沒有發生設定上的困擾，但朋友要求使用RC語音後卻出現一些未知問題。&lt;/p&gt;
+&lt;p&gt;以RC語音為例，遇上問題是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RC語音已設定自動感應發言無法通話。&lt;/li&gt;
+&lt;li&gt;如不啟用混音功能，對方聽不到的聲音，如開啟混音模式，通話中把電腦內部如遊戲、網頁、系統的提示相關聲音，通通強迫傳給對方收聽。&lt;/li&gt;
+&lt;li&gt;RC語音的混音模式時，通話雙方會聽到回音，音質輸入不流暢，甚至卡卡停頓類似跳針一般慘叫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;請示GOOGLE大神和RC官方教學都沒詳細說明如何解決混音模式正確的設定，達人們寫的太專業真的看不懂，只好自己研究先解決能發話問題。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="老師沒教的DIY" scheme="https://alinn.mynet.tw/categories/%E8%80%81%E5%B8%AB%E6%B2%92%E6%95%99%E7%9A%84DIY/"/>
+    
+    
+    <category term="軟體" scheme="https://alinn.mynet.tw/tags/%E8%BB%9F%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>開箱 eNB 黑白系列 18650行動電源</title>
+    <link href="https://alinn.mynet.tw/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/"/>
+    <id>https://alinn.mynet.tw/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/</id>
+    <published>2014-01-09T07:40:59.000Z</published>
+    <updated>2014-01-09T07:40:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650001.JPG" loading="lazy"><br>自從默默把手機升級成會吃電力的智慧型怪獸後，漸漸我也成了移動的低頭族小怪獸。(囧)</p><p>先前早就已購入18650電池四節式的行動電源盒，可裝四顆電池約250克微重加上黑色外型更顯得笨重感，後來評估自己非重度依賴手機的使用者，卡在使用備用電力並不是那樣頻繁，甚至外出時間連行動電源都沒上場的機會，手機電力都恰恰好吃緊的夠用，但又怕僅存的電量不夠接聽電話就自行失聯的窘境，所以便請示Google大神也和管理人討論一番如何選購。</p><span id="more"></span><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650002.JPG" alt="18650" loading="lazy"></p><blockquote><p><strong>18650電池</strong></p></blockquote><p>剛好提到18650電池就簡單說明，18650是以圓柱型鋰離子電池規格來命名，前兩碼為直徑18mm、後三碼為長65.0mm，跟普通常見的AA鹼性電池近似，充電電池的放大版，18650電池難廣泛運用在日常生活，因正負極不明顯易造成電路板短路直接燒壞有安全疑慮，大多使用於工業上如筆電為大宗。</p><p>18650電池選購目前常見有SAMSUNG、Panasonic、SANYO等，電池製造商還以是日韓大廠品牌為主，Panasonic是業界的高容量3400mAh供應，價格沒有那麼可愛但品質有保證，電池選購二話不說就快速敲定了P家上陣，不過電池轉換就算高容量也不可能達到百分之百，可能因電路設計或線材阻抗產生轉換損耗，可用的電力打個折大約內部剩60～70%都屬正常值，就如同硬碟容量也是會少幾個MB，套用網路計算公式大概保守估計可用容量為 6800 x 3.7÷ 5 x 0.8 = 4025.6mAh，約略可充個二至三次左右也夠用了。</p><blockquote><p><strong>選購方向</strong></p></blockquote><p>依自己不按牌理出牌的個性還是偏向半DIY的模式，再次自行挑選行動電源盒加18650電池，是考慮到如往後不使用行動電源盒，18650電池也可另行安裝到聚光強的LED手電筒，至少不擔心買到無良黑心商可能拆機或回收來的二手電池，不管如何也是參考諸多使用行動電源先烈們(誤)的心得。</p><ul><li> 約兩到三顆的電池盒大小。</li><li> 外盒設計能輕巧迷你盡量不佔包包空間。</li><li> 能維持一日的備用電量。</li><li> 行動電源盒的安全性。</li></ul><blockquote><p><strong>品牌</strong></p></blockquote><p>網拍上的18650行動電源盒大多數來自對岸產品，沒有所謂的大廠牌可選，目前只聽過幾個牌子如AiLi、七電、coolook、eNB。</p><p>只想單純使用充電，附有手電筒的功能且三顆裝跟四顆裝的重量並沒有大落差就完全不考量，原本屬意七電可輸出2A一度心動想入手但敗筆在上面有電量數字的顯示覺得多餘，和AiLi 的電路都沒有設計防反接安全裝置，電池正負極裝反會讓電流輸出瞬間變大而短路燒壞或更嚴重，半DIY的18650行動電源盒有風險必需要慎選，能符合就只eNB兩節式電源盒。</p><blockquote><p><strong>簡單開箱</strong></p></blockquote><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650003.JPG" loading="lazy"><br><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650004.JPG" loading="lazy"><br>eNB 中譯叫易能寶，猜想應該全程在MIC設計製造，外包裝簡體字，在意產地問題請不要入手</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650005.JPG" loading="lazy"><br>主機尺寸：10×4.5×2.3cm，已進化到二代版本</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650006.JPG" alt="黑與白" loading="lazy"><br>據說黑版算限量色，有店家不進貨成本稍貴</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650007.JPG" loading="lazy"><br>配件充電線兩條分別長度為35cm、80cm，無附USB充電器</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650008.JPG" loading="lazy"><br>搭配電池 Panasonic 3400mAh兩顆，電源盒加總重量約140g</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650009.JPG" loading="lazy"><br>簡單的充電孔Micro USB 輸入(IN)和USB 輸出(OUT)，無法調整電流均為5V1A</p><p><img src="/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB186500010.JPG" loading="lazy"><br>輸入(IN)時有三色電力分階指示閃爍，充電(OUT)中像霓虹燈般輪替，智慧型自動判斷充飽後燈滅</p><p><span style="color: #FF0000;">● 紅色 1%~ 33%</span>&nbsp;&nbsp;<span style="color: #FFA500;">● 橙色33%~ 66%</span>&nbsp;&nbsp;<span style="color: #32CD32;">● 綠色66%~100%</span><br><br></p><blockquote><p><strong>入手後感想</strong></p></blockquote><p>初次使用eNB的行動電源盒是屬於套筒設計，一整個難以打開也怕弄壞，卡榫非常密合又卡緊，依照盒上指示用力開壓，等卡榫鬆開一點後，再用大姆指從底座用力推開，只能說外殼材質非常紮實堅硬、套筒密合度高，不會因電池塞入讓外殼撐到散開變形，不像先前使用無名的四節式電源盒不小心掉到地上，底部卡榫斷腳呈現一把老骨頭快散的慘狀。</p><p>有網路店家寫eNB兩節式行動電源不適用Sony Z，正好我家的管理人手機使用Sony Z，實際測試電流可輸入也顯示AC充正常，但需要其它原廠傳輸線或Sony原廠傳輸線，不要用eNB所附贈的35cm線是無法輸出，用80cm線是正常使用，平平一樣是線但eNB原廠傳輸 / 充電線反應妙不可言的奇怪。</p><p>提外話，一到手就遇上eNB的機王，故障點是在當eNB主機輸入充電時(IN)，不管是用單一槽或雙槽充電，能量環只閃爍了兩三下隨即就燈滅，對照說明應是充飽電力才會停止閃纅，這樣就無法從能量環辨示充電是否有電源輸入 (IN) ，後來覺得這個問題會不會影響測量電力顯示對應的燈號，結果實際測試剛入手的兩顆電池，各別單一顆測得對應顯示為橙色均是相同的電力約66%，但把兩顆電池同時裝入後能量環卻直接變成紅燈約33%以下，判定對應的能量環燈號是頭殼秀逗，在七天內發現就直接把不良品寄回給店家更換新品。</p><p>曾Google到對岸論壇的網友在意電力轉換效率直接稱eNB電路太垃圾，通常有反接裝置電力轉換效率會較不好，除了這部份能接受外就似乎也沒什麼好挑的，青菜蘿蔔各有所好嘛！</p><p>現在智慧型手機當道的時代，各大廠嗅出商機投入製造，有些廠商為了吸引目光而標示不實誇大，還曾看過某團購網賣可愛萌系的行動電源，該粉絲頁突然擁入大量回應並不是好用推薦，而是該立方盒外型很迷你，電源容量卻異常誇張高達12000mAh，甚至反應只充一次隨即壞去，立馬變拋棄式行動電源，太高招了吧！</p><p>購買前預備功課還是必要的，不必盲從追求高容量的電力，就算標示不實也是無用。</p><p>20140525UP：<br>eNB在2014年已改最新版本取名為<a href="http://www.optisharp.hk/product/?type=detail&id=26" target="_blank" rel="noopener">凌劍AA</a>，為了區分新舊版混亂，外包裝變成簡單的紙盒包材，USB 輸出(OUT)接口改成黑色來辨識，輸出電流則提升為5V2.1A，Micro USB 輸入(IN)繼續維持5V1A，更新後的轉換率據說高達 93%。</p><p>20161009UP：<br>據網友消息已倒閉，eNB官網無法進入，看來在行動電源競爭裡收場，畢竟有太多低價18650行動電源，只是說在行動電源廠商重不重視產品的安全性，所以網拍eNB應該都是業者的庫存貨了。</p><p>// 香港eNB易能寶 <a href="http://www.optisharp.hk/" target="_blank" rel="noopener">http://www.optisharp.hk/</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/%E9%96%8B%E7%AE%B1-eNB-%E9%BB%91%E7%99%BD%E7%B3%BB%E5%88%97-18650%E8%A1%8C%E5%8B%95%E9%9B%BB%E6%BA%90/eNB18650001.JPG&quot; loading=&quot;lazy&quot;&gt;&lt;br&gt;自從默默把手機升級成會吃電力的智慧型怪獸後，漸漸我也成了移動的低頭族小怪獸。(囧)&lt;/p&gt;
+&lt;p&gt;先前早就已購入18650電池四節式的行動電源盒，可裝四顆電池約250克微重加上黑色外型更顯得笨重感，後來評估自己非重度依賴手機的使用者，卡在使用備用電力並不是那樣頻繁，甚至外出時間連行動電源都沒上場的機會，手機電力都恰恰好吃緊的夠用，但又怕僅存的電量不夠接聽電話就自行失聯的窘境，所以便請示Google大神也和管理人討論一番如何選購。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="玩具潮物" scheme="https://alinn.mynet.tw/categories/%E7%8E%A9%E5%85%B7%E6%BD%AE%E7%89%A9/"/>
+    
+    
+    <category term="週邊" scheme="https://alinn.mynet.tw/tags/%E9%80%B1%E9%82%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FILCO FKB104MC/CB 青軸機械式鍵盤</title>
+    <link href="https://alinn.mynet.tw/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/"/>
+    <id>https://alinn.mynet.tw/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/</id>
+    <published>2010-11-04T13:11:34.000Z</published>
+    <updated>2010-11-04T13:11:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-007-1.JPG" alt="無底的敗家黑洞" loading="lazy"><br>咦～又是鬼打牆嗎？</p><p>在中秋節前夕，與管理人討論主機過熱的問題，其實曾因散熱掛掉一顆硬碟和顯示卡的窩囊事，至今還是會覺得莫名其妙想爆怒，所以購入前請示Google大神和親朋好友推薦，最後就購買自己喜歡酷媽牌CPU散熱器來改善機殼內部飆高的溫度，還有矯正主機板不良彎曲的背板零件，最大的意外結果是管理人也順便敗入一把青軸。</p><p>真的！我沒有特別去勸敗。</p><span id="more"></span><p>我想可能管理人長期在茶毒的後遺症下發作，所以同證<font size="4"><strong>隨手放茶毒供人入火坑</strong></font>的歪理（誤）。</p><blockquote><p><strong>選軸的部份</strong></p></blockquote><p>以管理人的手感，茶毒太過類似一般薄膜式鍵盤的Q，不同在於多了扎實感，手感生硬也過於低調黑軸的選項，光聽青軸敲字聲的爽度可算是直接勝出。鍵盤外型來說大同小異但視覺是重點，所以樸實粗獷的原廠Cherry再度出局，Ducky是CP值最高，唯一相符的品牌就FILCO。</p><blockquote><p><strong>重新開箱複習一次</strong></p></blockquote><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-001.JPG" loading="lazy"><br>樸素外盒應該是平行輸入，Majestouch FKB104MC/CB。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-002.JPG" loading="lazy"><br>盒底詳細說明本體顏色是黑色，軸是青軸。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-003.JPG" loading="lazy"><br>保護透明蓋一樣拿來當免費的防塵蓋，還有平行貨只少代理商的保證書，不過水貨商還在日版保證書蓋上保固日期以示負責。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-004.JPG" loading="lazy"><br>請再次認明銀色FILCO是沒有N-Key血統標章。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-005.JPG" loading="lazy"><br>表面看似低調的鍵盤本體，標準104鍵配置，骨子裡卻是可以飆高音的青軸。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-006-1.JPG" loading="lazy"><br>選購是FILCO中刻。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-007.JPG" loading="lazy"><br>青軸是採綠光，FILCO在配置的燈光上用了一點小心機來區別軸心。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-008-1.JPG" loading="lazy"><br>目前網購商家都會贈送FILCO的拔鍵器和鍵帽，但以後不知道會有送嗎？</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-008.JPG" loading="lazy"><br>如果有印象的話，在某電腦雜誌促銷曾出現類似限量款的鍵盤，也是採用紅色的鍵帽。</p><p><img src="/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-010.JPG" loading="lazy"><br>鍵盤上的身份證貼紙，一樣是可愛的Made in Taiwan。</p><p>目前比起6月時購買狀況，彷彿進入戰國時代，各家鍵盤製造商一窩蜂分食機械式鍵盤這塊大餅，嗅出一絲商機馬上投入量產，就像曾有過熱潮的葡式蛋塔、甜甜圈般曇花一現，雖然知道廠商可能是玩票性試水溫，但也不希望最後又一家一家消失不見。</p><p>接下來問題，會不會又出現一把黑潮？</p><p>// 希望我不要步入松鼠族。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/FILCO-FKB104MC-CB-%E9%9D%92%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4/FILCO-FKB104MC-007-1.JPG&quot; alt=&quot;無底的敗家黑洞&quot; loading=&quot;lazy&quot;&gt;&lt;br&gt;咦～又是鬼打牆嗎？&lt;/p&gt;
+&lt;p&gt;在中秋節前夕，與管理人討論主機過熱的問題，其實曾因散熱掛掉一顆硬碟和顯示卡的窩囊事，至今還是會覺得莫名其妙想爆怒，所以購入前請示Google大神和親朋好友推薦，最後就購買自己喜歡酷媽牌CPU散熱器來改善機殼內部飆高的溫度，還有矯正主機板不良彎曲的背板零件，最大的意外結果是管理人也順便敗入一把青軸。&lt;/p&gt;
+&lt;p&gt;真的！我沒有特別去勸敗。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="玩具潮物" scheme="https://alinn.mynet.tw/categories/%E7%8E%A9%E5%85%B7%E6%BD%AE%E7%89%A9/"/>
+    
+    
+    <category term="週邊" scheme="https://alinn.mynet.tw/tags/%E9%80%B1%E9%82%8A/"/>
+    
+    <category term="鍵盤" scheme="https://alinn.mynet.tw/tags/%E9%8D%B5%E7%9B%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Wordpress 擊落日誌</title>
+    <link href="https://alinn.mynet.tw/Wordpress-%E6%93%8A%E8%90%BD%E6%97%A5%E8%AA%8C/"/>
+    <id>https://alinn.mynet.tw/Wordpress-%E6%93%8A%E8%90%BD%E6%97%A5%E8%AA%8C/</id>
+    <published>2010-10-14T10:19:17.000Z</published>
+    <updated>2010-10-14T10:19:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>10月7日<br>一如往常，開啟後台按著滑鼠檢視垃圾中留言，輕鬆刪除蜘蛛留著看似有人味的垃圾信。<br>其實每當登錄後台，不知從那一版更新後，老是看到Wordpress回應著：「你確定這麼做？」的字樣，應該就要警戒一下，不過一切都來不及了，是我最後一次登入後台的關鍵時刻，卻都沒有做什麼。</p><p>10月10日<br>早晨陽光如此刺眼，正如當我努力睜開眼睛清醒時，我的管理人卻報告不幸的訊息，Blog無法開啟詢問我有做什麼動作。<br>第一次回報：管理人努力檢視修復。<br>第二次回報：管理人發現資料庫異常，多筆WP相關php消失。<br>第三次回報：管理人重新試圖用暴力的方式複製舊有資料，結果失敗。<br>第四次回報：管理人放棄搶救，全部重新安裝，試圖使用之前定期備份Blog的資料。<br>第五次回報：Wordpress確定重新安裝完成，搶救回來卻是Blog中全部文章無法點入。<br>第六次回報：再次砍掉重練重新來過一次，但新建立的WP根本不甩資料庫甚至於無法寫入，消失依舊還是消失。<br>．<br>．<br>．<br>以上諸如的回報。</p><p>我盼希望能夠搶救回來，黃金72小時已過，我從期盼轉為放棄信念也越來越強烈，Wordpres完全被擊沉我的資料庫，就算抱定重新安裝的開始，資料庫就是無法和程式相互呼叫完全沒法運作，點入文章後是沒理由的損壞。</p><p>是的！我輸了。</p><span id="more"></span><p>從2008年11月底建構才短短不到2年期間，Wordpress是全球使用者眾多第一選擇的Blog系統，WP團隊在發生重大Bug都能即時應變，能馬上發佈更新版本，也有不少高手級的使用者會寫出多種實用的Plug-in，不管是商用還是個人模版都超級精美，少了費時自製模版的時間立即開站，所以模版專業、隨時更新成了首選，不懂電腦語言也能上手操作。</p><blockquote><p><strong>使用期間沒發生重大事件</strong></p></blockquote><p>這回Wordpress卻已經主動說「遊戲結束」。重點人不是我殺的狀態下，完全摸不著頭緒的資料庫死亡，明明前一刻還活著好好的，下秒就直接自爆結束，死因不明，這樣的恐懼都開始考慮換別套系統如Life Type、TT等。</p><p>在管理人的建議下，使用最基本頗為陽春的Bo-Blog，起碼穩定性好一點，連我對PHP這麼弱腳的人，都能小小強制回復Bo-Blog資料庫，不過Bo-Blog開發也暫時沒有再更新，後續只有修正Bug部份，但對於要求不多已經夠用。</p><blockquote><p><strong>全世界轉用WP時我從裡面跳出來</strong></p></blockquote><p>最後，想抱怨Wordpress，要不要改名叫World Plug-in（WP），什麼都要Plug-in，好處是可以減少不需要的插件，但連最基本的備份資料也要另掛插件，備份還是專屬格式sql.gz，並不是RSS或是xml、txt，然後匯入功能居然還要掛入另一支插件。</p><p>選擇WP需要包容一切的命，一切的破滅，是我重新安裝資料庫後，匯入的備份資料居然是有問題無法點入閱讀，最後還是用土法煉鋼一個一個從舊的Blog再搬回來，沒有備份存到後面的文章，用Google的快取加Ctrl+c、v搶救回來。</p><p><strong>擊落我的最後一根稻草就是Plug-in。</strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;10月7日&lt;br&gt;一如往常，開啟後台按著滑鼠檢視垃圾中留言，輕鬆刪除蜘蛛留著看似有人味的垃圾信。&lt;br&gt;其實每當登錄後台，不知從那一版更新後，老是看到Wordpress回應著：「你確定這麼做？」的字樣，應該就要警戒一下，不過一切都來不及了，是我最後一次登入後台的關鍵時刻，卻都沒有做什麼。&lt;/p&gt;
+&lt;p&gt;10月10日&lt;br&gt;早晨陽光如此刺眼，正如當我努力睜開眼睛清醒時，我的管理人卻報告不幸的訊息，Blog無法開啟詢問我有做什麼動作。&lt;br&gt;第一次回報：管理人努力檢視修復。&lt;br&gt;第二次回報：管理人發現資料庫異常，多筆WP相關php消失。&lt;br&gt;第三次回報：管理人重新試圖用暴力的方式複製舊有資料，結果失敗。&lt;br&gt;第四次回報：管理人放棄搶救，全部重新安裝，試圖使用之前定期備份Blog的資料。&lt;br&gt;第五次回報：Wordpress確定重新安裝完成，搶救回來卻是Blog中全部文章無法點入。&lt;br&gt;第六次回報：再次砍掉重練重新來過一次，但新建立的WP根本不甩資料庫甚至於無法寫入，消失依舊還是消失。&lt;br&gt;．&lt;br&gt;．&lt;br&gt;．&lt;br&gt;以上諸如的回報。&lt;/p&gt;
+&lt;p&gt;我盼希望能夠搶救回來，黃金72小時已過，我從期盼轉為放棄信念也越來越強烈，Wordpres完全被擊沉我的資料庫，就算抱定重新安裝的開始，資料庫就是無法和程式相互呼叫完全沒法運作，點入文章後是沒理由的損壞。&lt;/p&gt;
+&lt;p&gt;是的！我輸了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="+ 關於" scheme="https://alinn.mynet.tw/categories/%E9%97%9C%E6%96%BC/"/>
+    
+    
+    <category term="Blog" scheme="https://alinn.mynet.tw/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>練習題之風格</title>
+    <link href="https://alinn.mynet.tw/%E7%B7%B4%E7%BF%92%E9%A1%8C%E4%B9%8B%E9%A2%A8%E6%A0%BC/"/>
+    <id>https://alinn.mynet.tw/%E7%B7%B4%E7%BF%92%E9%A1%8C%E4%B9%8B%E9%A2%A8%E6%A0%BC/</id>
+    <published>2010-07-11T15:43:00.000Z</published>
+    <updated>2010-07-11T15:43:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/%E7%B7%B4%E7%BF%92%E9%A1%8C%E4%B9%8B%E9%A2%A8%E6%A0%BC/20080816.JPG" loading="lazy"></p><p>早在兩年前，原圖檔案已跟隨著壞死的80G硬碟一起消失，硬碟死亡瞬間是多麼快速，快速到連自己都來不及做備份，只能說自己非常幸運還能從朋友找到存活小圖。</p><p>懷念這段轉換風格期。</p><p>最近遇到的新難題是如何具有個人特色又鮮明的風格，我也不知道想要的風格是什麼，特色在那裡？只能自嘲沒風格就是我的風格吧！</p><span id="more"></span><p>重頭檢視作品，大概就是人物臉蛋和整個畫面並沒有為之亮眼，但內心卻有點悶，悶是說背景不夠用心，但背景真的親自一筆一筆勾畫出來，踏實勾畫背景也比較算自己完整的作品，但親畫算不用心的標準，讓我不知該怎麼說，是不是下回偷偷用圖片合成比較省事。(笑)</p><p>盡量能有鮮明和令人一眼就能認出新風格，投入的畫者何其多而不是出現再類似相仿，不可能一直當別人的影子在圈圈裡打轉，名家牌總也會失效，這點沒什麼可以反駁，標準尺還是握在美編手中，所以只能努力再努力就對了。 </p><p>回頭看見兩年前作品，總充滿熱血十足幹勁在默默作畫，歷經被別人批評過程，坦然面對批評也是進步的關鍵，一路上慢慢變化，突破內心裡某些所謂的卡關，然後自我感覺畫風又成長了一點，一次又一次厚著臉投稿再被退稿，退稿對於是家常便飯的事，我不會去在意。</p><p>曾經有不太熟悉的同事曾勸我把畫畫當夢想就好，只是我很需要一個目標。</p><p>提外話：</p><p>似乎滿多收集封面的魔人都會猜插畫家所畫的人物原型，連照片原型都找得出來。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/%E7%B7%B4%E7%BF%92%E9%A1%8C%E4%B9%8B%E9%A2%A8%E6%A0%BC/20080816.JPG&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;早在兩年前，原圖檔案已跟隨著壞死的80G硬碟一起消失，硬碟死亡瞬間是多麼快速，快速到連自己都來不及做備份，只能說自己非常幸運還能從朋友找到存活小圖。&lt;/p&gt;
+&lt;p&gt;懷念這段轉換風格期。&lt;/p&gt;
+&lt;p&gt;最近遇到的新難題是如何具有個人特色又鮮明的風格，我也不知道想要的風格是什麼，特色在那裡？只能自嘲沒風格就是我的風格吧！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="繪畫練習題" scheme="https://alinn.mynet.tw/categories/%E7%B9%AA%E7%95%AB%E7%B7%B4%E7%BF%92%E9%A1%8C/"/>
+    
+    
+    <category term="塗鴉五四三" scheme="https://alinn.mynet.tw/tags/%E5%A1%97%E9%B4%89%E4%BA%94%E5%9B%9B%E4%B8%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FILCO FKB104M/CB 茶軸機械式鍵盤開箱</title>
+    <link href="https://alinn.mynet.tw/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/"/>
+    <id>https://alinn.mynet.tw/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/</id>
+    <published>2010-06-02T05:22:57.000Z</published>
+    <updated>2010-06-02T05:22:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-0011.JPG" loading="lazy"></p><p>啊～我不是松鼠族！</p><p>自從不小心誤入PTT鍵鼠版後，努力尋找便宜好用的滑鼠，近來滑鼠品質損壞率高到都可以堆成一座鼠塜，反倒是滑鼠沒找成卻莫名奇妙推入機械式鍵盤的火坑中。其實選購前猶豫了約半年，直到用不到半年的廉價薄膜鍵盤碰巧故障，震驚下決定入手機械式鍵盤，只好作足功課才不至於買到偽機械式，在完全不了解機械式鍵盤情形下，不見得別人推薦什麼軸就會適合自己的手，當然能親自試打過每個鍵盤是最好，只不過在我居住的小城市並沒有專門賣鍵盤可以試打，一切靠運氣。</p><span id="more"></span><p>機械式鍵盤的軸，分別青軸、茶軸、黑軸、白軸、紅軸、ALPS簡易軸，各軸有不同的手感、段落感、按鍵行程…等，每個軸的所呈現手感不同真是難選，明明已下不了決定又來一個難題，完全考倒要買什麼軸而內心不斷的掙扎。</p><blockquote><p><strong>各種軸的描述</strong></p></blockquote><ul><li><p>青軸（藍色）：按下去的會喀的一聲，手感清脆，段落分明，聲音如同打字機的感覺。</p></li><li><p>茶軸：與青軸相似，手感較輕一點，按起來比較輕快也較Q，一般怕吵又想保有青軸手感，除了一般人接觸更適合女性選擇。</p></li><li><p>黑軸：最重最硬，直上直下回彈力強無段落感，久按手指會累，因需花費大的力氣去按入，聲音較安靜，鍵程短觸發快，通常最推薦遊戲時使用。</p></li><li><p>白軸（灰色）：MX四色軸中最少見的一種，最重最硬，一般會使用在空白鍵上面，空白鍵是使用大拇指來按的，所以荷重要不同。</p></li></ul><blockquote><p><strong>機械式鍵盤品牌選擇</strong></p></blockquote><p>開始只是想買個入門級簡易軸約一千多元，考慮到夜間安靜連呼吸都能聽見，更別說鍵盤敲擊聲，特別在Youtube聽網友分享各軸聲音，最後投票給茶軸和黑軸，外型上完全是被FILCO吸引直接納入我第一把機械式鍵盤。。</p><ul><li><p>德國Cherry：想直接攻頂原廠德國工藝，考量桌面小，外型大又粗獷，只能忍痛向夢幻逸品說掰掰。</p></li><li><p>美系DAS：採鏡面設計特色易沾指紋，有附擦拭布要定期擦拭，光這樣想就已放棄。</p></li><li><p>台灣Datacomp明哲：外型像99元鍵盤超大支，價格上便宜是優勢，如想再入手其它軸倒可考慮。</p></li><li><p>台灣Ducky：鍵盤送原廠牛皮墊，薄框外型，分離式USB，底盤的線路設計可依個人配置，依條件看來CP值算高，次要選擇。</p></li><li><p>日本FILCO：外型是簡單薄框小而美，少有的LED燈透徹藍眼光，鍵帽沒多餘的字根非常簡潔有力。</p></li></ul><blockquote><p><strong>簡單開箱</strong></p></blockquote><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-001.JPG" loading="lazy"><br>曾經一度快消失的機械鍵盤，包裝採用彩盒印刷，Majestouch FKB104M/CB。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-002.JPG" loading="lazy"><br>附上SP2轉接頭，還有硬塑膠透明蓋保護，平常不使用也可以當防塵蓋。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-003.JPG" loading="lazy"><br>附上保證卡和簡單日文說明，台灣共榮代理。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-004.JPG" loading="lazy"><br>主角現身，標準104鍵配置，重量約1 .2Kg。(裁到邊邊，囧”)</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-005.JPG" loading="lazy"><br>粉紅色FILCO的LOGO束帶。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-007.JPG" loading="lazy"><br>迷人的電眼藍光，銀色的FILCO是沒有N-Key血統。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-008.JPG" loading="lazy"><br>鍵帽摸起來光滑，一字型Enter鍵，不太在意非倒L的Enter鍵。</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-009.JPG" loading="lazy"><br>採油墨印刷皆有coating處理，缺點無雷射刻字，鍵帽少了其它字根真是好乾淨，但有些中字不會打要靠注音</p><p><img src="/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-012.JPG" loading="lazy"><br>日商DIATEC，產地是台灣，不曉得鍵盤有去日本驗身再回台灣嗎？（囧？）</p><blockquote><p><strong>入手後感想</strong></p></blockquote><p>先前借用家人的i-rocks KR-6220G算是CP值高的鍵盤，打字回彈力好也不會太軟但手感不明確。</p><p>以往不曾考慮購入機械式鍵盤，主要是價錢比一般鍵盤貴十倍以上，不過是打打字有必要用到這麼<strong>貴又重</strong>的鍵盤，但實際用了機械式鍵盤後，重新適應鍵盤的不順手，到指尖在鍵盤飛舞般輕盈飛打，按到底的聲音好清脆，明確扎實的答答答聲，聽不到薄膜鍵盤發出的怪聲，如同品嚐老茶有越來越回甘的感覺。</p><p>泡完茶，超想知道黑軸的手感，這是入坑第一步啊~（掩面）</p><p>　　＊　　　　　＊　　　　　＊　　　</p><p>一段茶軸單鍵連續按的聲音。<br><audio src="/FILCO-FKB104M-CB-茶軸機械式鍵盤開箱/FKB104MCB_A.mp3" controls="controls" style="width:220px;">不支援HTML5語法</audio></p><p>我使用的輸入法需要非常多空白鍵完成，但聽起來非常虛和沉重，猶如像喉嚨燒聲。<br><audio src="/FILCO-FKB104M-CB-茶軸機械式鍵盤開箱/FKB104MCB_B.mp3" controls="controls" style="width:220px;">不支援HTML5語法</audio></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/FILCO-FKB104M-CB-%E8%8C%B6%E8%BB%B8%E6%A9%9F%E6%A2%B0%E5%BC%8F%E9%8D%B5%E7%9B%A4%E9%96%8B%E7%AE%B1/FILCO-FKB104M-0011.JPG&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;啊～我不是松鼠族！&lt;/p&gt;
+&lt;p&gt;自從不小心誤入PTT鍵鼠版後，努力尋找便宜好用的滑鼠，近來滑鼠品質損壞率高到都可以堆成一座鼠塜，反倒是滑鼠沒找成卻莫名奇妙推入機械式鍵盤的火坑中。其實選購前猶豫了約半年，直到用不到半年的廉價薄膜鍵盤碰巧故障，震驚下決定入手機械式鍵盤，只好作足功課才不至於買到偽機械式，在完全不了解機械式鍵盤情形下，不見得別人推薦什麼軸就會適合自己的手，當然能親自試打過每個鍵盤是最好，只不過在我居住的小城市並沒有專門賣鍵盤可以試打，一切靠運氣。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="玩具潮物" scheme="https://alinn.mynet.tw/categories/%E7%8E%A9%E5%85%B7%E6%BD%AE%E7%89%A9/"/>
+    
+    
+    <category term="週邊" scheme="https://alinn.mynet.tw/tags/%E9%80%B1%E9%82%8A/"/>
+    
+    <category term="鍵盤" scheme="https://alinn.mynet.tw/tags/%E9%8D%B5%E7%9B%A4/"/>
+    
+  </entry>
+  
+</feed>
