@@ -1,0 +1,208 @@
+/* Mastodon embed timeline */
+
+/* Main container */
+.mt-timeline {
+  height: calc(100% - 4rem);
+  padding: 2rem 3rem;
+  position: relative;
+  background: #fff;
+  font-size: :16px;
+  margin: 0;
+	padding: 0;
+  
+}
+
+.mt-timeline a:link {
+  color: #006eff;
+}
+.mt-timeline a:active {
+  color: #000;
+}
+.mt-timeline a:hover {
+  color: #999;
+}
+.mt-timeline a {
+  text-decoration: none;
+  color: #000;
+  
+}
+
+.mt-body {
+  height: 100%;
+  /*overflow-y: auto;*/
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  }
+
+.mt-body .invisible {
+  display: none;
+}
+
+/* Toot container */
+.mt-toot {
+  margin: 0 1rem 0 0;
+  padding: 1rem 0 0.2rem 65px;
+  position: relative;
+  min-height: 60px;
+  background-color: transparent;/*大塊背景色*/
+  /*border-bottom: 1px solid #dee2e6;*/
+}
+.mt-toot:hover {
+  cursor: pointer;
+  background-color: #f7f7f7;/*背景超連結*/
+}
+.mt-toot p:last-child {
+  margin-bottom: 0;
+  }
+
+/* User icon */
+.mt-user {
+  display: table;
+  font-weight: 600;
+  font-size: 18px;
+  
+}
+.mt-avatar {
+  position: absolute;
+  top: 20px;/*使用者照片高度預設20*/
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: #FFF;
+  border-radius: 50%;/*使用者照片切角度*/
+  }
+.mt-avatar-boosted {
+  width: 40px;
+  height: 40px;
+}
+.mt-avatar-booster {
+  width: 25px;
+  height: 25px;
+  top: 25px;
+  left: 25px;
+  }
+
+/* Message */
+.toot-text {
+  margin-bottom: 0.25rem;
+}
+.toot-text .ellipsis::after{
+  content:'...';
+}
+.mt-error {
+  color: darkred;
+  background: lightpink;
+  margin: 5px;
+  padding: 10px;
+}
+
+/* Poll */
+.toot-poll {
+  margin-bottom: 0.25rem;
+}
+.toot-poll ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toot-poll ul li:not(:last-child){
+  margin-bottom: 0.25rem;
+}
+.toot-poll ul li:before {
+  content: "◯";
+  padding-right: 0.5rem;
+}
+
+/* Medias */
+.toot-media {
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+.toot-media-preview {
+  position: relative;
+  margin-top: 0.25rem;
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+.toot-media-spoiler > img {
+  filter: blur(2rem);
+}
+.toot-media-preview a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  }
+.img-ratio14_7 {
+position: relative;
+padding-top: 48.95%; /* 14:7 */
+width: 100%;
+}
+.img-ratio14_7 > img {
+width: 100%;
+height: auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}  
+
+/* Date */
+.toot-date {
+  color: #555;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  text-align: right;
+  }
+  
+
+
+/* Loading-spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top-color: #555;
+  border-radius: 50%;
+  position: relative;
+  animation: loader-rotate 1s linear infinite;
+  top: auto;  /*外邊界設定*/
+  margin: auto;  /*外邊界距離*/
+ }
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } 
+}
+
+
+/* See more btn */
+.mt-seeMore {
+	margin: 2rem auto;
+	padding: 0 2rem;
+	text-align: center;
+  }
+
+/* Hidden element */ 
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
