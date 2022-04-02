@@ -78,7 +78,7 @@
     <div class="entry">
       
         <p>先說明一下，2016/07/29在微軟公告最後期限免費下載升級成正式版Win10，一開始超級無敵擔心WACOM驅動程式會不會又來個出錯小視窗重現，已打算升級有問題立刻回復Win7的決心，出乎意料之外是居然都可以無縫接軌運用舊驅動和軟體，出狀況反倒是排版軟體和UPS驅動不太相容，總而言之Win10看來較偏行動裝置和觸控運用，美化視窗界面又加強Win7體質的感覺。</p>
-<p>目前繪畫軟體主要以Painter 2016，較少運用Photoshop來作畫，感壓設定請自行試看看。</p>
+<p>目前繪畫軟體主要以Painter 2016，Krita 4.4.2(x64)試用，較少運用Photoshop來作畫，感壓設定請自行試看看。</p>
 <br>
 
 <p><img src="/%E8%A7%A3%E6%B1%BAWacom-Intuos2%E9%A9%85%E5%8B%95%E5%AE%89%E8%A3%9D/Wacomintuos2.JPG" loading="lazy"></p>
@@ -90,24 +90,25 @@
 <p>如手邊還有舊的WACOM系列數位板驅動程式，請優先測試，不見得適用最新的驅動程式，畢竟每台電腦狀況不同。</p>
 <p>首先到<a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>下載支援Windows7驅動程式：</p>
 <ul>
-<li>下載Windows 7適用<code>6.1.1-3</code> 版本。（此版本只有單純的驅動程式）</li>
+<li>下載Windows 7適用<code>6.1.1-3</code>版本。（此版本只有單純的驅動程式）</li>
 <li>拔除數位板USB，直接安裝<code>6.1.1-3</code>版本驅動程式後重新開機。</li>
 <li>開機後，數位板USB再插入電腦，連接電腦自動偵測，完成。</li>
 </ul>
 <p><a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>已經完全移除<code>6.1.1-3</code>Drive的載點，提供個人備份<code>6.1.1-3</code> 版本：<br><a href="https://mega.nz/#!tsQHjS4J!-zxOIW3c_bUQk8ZIBQ9VnF_bmN8aLt9vlwCF7uJwD5M" target="_blank" rel="noopener external nofollow noreferrer">載點1</a> (MEGA)<br><a href="https://drive.google.com/file/d/0BxFVIFx6lyBdeUxTRWFXaWZxN28/view?usp=sharing&resourcekey=0-sWUjxxQA12emP92yhB4CAw" target="_blank" rel="noopener external nofollow noreferrer">載點2</a> (Google)</p>
+<p>和當初Windows系統和條件狀態不太相同，已經無法得知<code>6.1.1-3</code>驅動程式還能適用於win7，請以WACOM官方產品資源搜尋建議的<code>6.2.0W5</code>(Windows XP, Vista, &amp; 7)驅動程式來安裝測試。</p>
 <blockquote>
 <p><strong>安裝Win10詭異的問題</strong></p>
 </blockquote>
-<p>2021年SSD硬碟整個格式化後，重新安裝和更新到Windows10 專業版（版本1909），沿用先前Win7版本的WACOM驅動<code>6.1.1-3</code>，上一秒還可以運作，下一秒感壓能力居然失效又成為一支會滑動的滑鼠筆，經單獨安裝數位筆驅動測試過正常，幸好隔日開機一切都安好，並沒有發生Win7自動解除感壓驅動的事件。</p>
+<p>2021年SSD固態硬碟整個格式化後，安裝更新到Windows10 專業版（版本 21H1），沿用先前Win7版本的WACOM驅動<code>6.1.1-3</code>，上一秒還可以運作，下一秒感壓能力居然失效又成為一支會動的滑鼠筆，經單獨安裝數位筆驅動測試過可以正常運作，就不想再多安裝桌面控制中心的驅動，幸好隔日開機一切都安好，並沒有發生Win7自動解除感壓驅動的事件。</p>
 <ul>
 <li><a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>搜尋產品資源為型號XD-0608-U。</li>
-<li>下載Intuos 2 (USB) 驅動Windows最終版本為<code>6.2.0W5</code>。</li>
+<li>下載Intuos 2 (USB) 驅動Windows建議版本為<code>6.2.0W5</code>(Windows XP, Vista, &amp; 7)。</li>
 <li>不需要特別拔除USB，直接安裝驅動重新開機，完成。</li>
 </ul>
 <blockquote>
 <p><strong>安裝MacBook Pro模糊的試題</strong></p>
 </blockquote>
-<p>原以為老筆電Macbook Pro（macOS版本 10.13.6 High Sierra）無緣安裝WACOM的數位筆，幾度挫敗後非常想放棄，來回下載測試數位板都沒反應，因為WACOM原廠對應方式，公告的消息很模糊，最後還不如參考神通廣大的網友們相關文章獲得解決，不知為什麼MacOS需要安裝到兩支驅動程式才具備有感壓能力。</p>
+<p>以為老筆電Macbook Pro（macOS版本 10.13.6 High Sierra）無緣安裝WACOM的數位筆，來回下載測試時數位板都完全沒反應，幾度安裝挫敗後非常想放棄，WACOM原廠對應方式，公告消息有些模糊不清，最後還不如參考神通廣大的網友們相關文章獲得解決，原來MacOS需要安裝到兩支驅動程式才具備有感壓能力。</p>
 <p>首先在 <a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>搜尋對照自己macOS支援版本：</p>
 <ul>
 <li>驅動程式選擇較舊macOS版本10.13.6適用的桌面控制中心驅動<code>Driver 6.3.40-2</code> (macOS 10.12 - 10.15)。</li>
@@ -127,7 +128,7 @@
 </ul>
 <p>路徑：使用者設定&gt;系統管理範本&gt;WINDOWS 元件&gt;Tablet PC&gt;游標<br>設定：關閉畫筆回饋</p>
 <p><img src="/%E8%A7%A3%E6%B1%BAWacom-Intuos2%E9%A9%85%E5%8B%95%E5%AE%89%E8%A3%9D/wacomintuosO.JPG" alt="以Photoshop CS4試畫，有時數位筆不順也會變菱形（抖）" loading="lazy"></p>
-<p>// 只要有使用WACOM的一天，會持續隨時更新狀態。<br>// 2021/02/04 更新</p>
+<p>// 2022/04/03 會持續隨時更新狀態。</p>
 
       
     </div>
