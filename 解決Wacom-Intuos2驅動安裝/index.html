@@ -85,7 +85,7 @@
 <blockquote>
 <p><strong>安裝Win7驅動的難題</strong></p>
 </blockquote>
-<p>2010年從WinXP升級到Win7不是系統難操作反而是舊驅動程式，最大衝擊是舊有WACOM Intuos 2（XD系列）的數位筆的游標是完全無法動彈，在WinXP作業系統就算沒WACOM驅動程式還是可控制移動滑鼠游標，差別於有沒有感壓，這下只能求助WACOM是否有釋出更新版的驅動程式。</p>
+<p>2010年從WinXP升級到Win7不是系統難操作反而是舊驅動程式，最大衝擊是舊有WACOM Intuos 2（XD系列）的數位筆游標是完全無法動彈，在WinXP作業系統就算沒WACOM驅動程式還是可控制移動滑鼠游標，差別於有沒有感壓，這下只能求助WACOM是否有釋出更新版的驅動程式。</p>
 <span id="more"></span>
 <p>如手邊還有舊的WACOM系列數位板驅動程式，請優先測試，不見得適用最新的驅動程式，畢竟每台電腦狀況不同。</p>
 <p>首先到<a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>下載支援Windows7驅動程式：</p>
@@ -99,7 +99,7 @@
 <blockquote>
 <p><strong>安裝Win10詭異的問題</strong></p>
 </blockquote>
-<p>2021年SSD固態硬碟整個格式化後，安裝更新到Windows10 專業版（版本 21H1），沿用先前Win7版本的WACOM驅動<code>6.1.1-3</code>，上一秒還可以運作，下一秒感壓能力居然失效又成為一支會動的滑鼠筆，經單獨安裝數位筆驅動測試過可以正常運作，就不想再多安裝桌面控制中心的驅動，幸好隔日開機一切都安好，並沒有發生Win7自動解除感壓驅動的事件。</p>
+<p>2021年SSD固態硬碟整個格式化後，安裝更新到Windows10 專業版（版本 21H1），沿用先前Win7版本的WACOM驅動<code>6.1.1-3</code>，上一秒還可以運作，下一秒感壓能力居然失效又成為一支會動的滑鼠筆，經單獨安裝數位筆驅動測試過可以正常運作，就不想再多安裝桌面控制中心的驅動，幸好隔日開機一切都安好，並沒有發生Win7自動解除感壓和驅動的事件。</p>
 <ul>
 <li><a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>搜尋產品資源為型號XD-0608-U。</li>
 <li>下載Intuos 2 (USB) 驅動Windows建議版本為<code>6.2.0W5</code>(Windows XP, Vista, &amp; 7)。</li>
@@ -108,7 +108,7 @@
 <blockquote>
 <p><strong>安裝MacBook Pro模糊的試題</strong></p>
 </blockquote>
-<p>以為老筆電Macbook Pro（macOS版本 10.13.6 High Sierra）無緣安裝WACOM的數位筆，來回下載測試時數位板都完全沒反應，幾度安裝挫敗後非常想放棄，WACOM原廠對應方式，公告消息有些模糊不清，最後還不如參考神通廣大的網友們相關文章獲得解決，原來MacOS需要安裝到兩支驅動程式才具備有感壓能力。</p>
+<p>以為老筆電Macbook Pro（macOS版本 10.13.6 High Sierra）無緣安裝WACOM的數位筆，來回下載驅動測試時數位板都完全沒作用反應，幾度安裝挫敗後非常想放棄，WACOM原廠對應方式，公告消息有些模糊不清，最後還不如參考神通廣大的網友們相關文章獲得解決，原來MacOS需要安裝到兩支驅動程式才具備有感壓能力。</p>
 <p>首先在 <a href="https://www.wacom.com/zh-tw/support/product-support/drivers" target="_blank" rel="noopener external nofollow noreferrer">WACOM台灣官網</a>搜尋對照自己macOS支援版本：</p>
 <ul>
 <li>驅動程式選擇較舊macOS版本10.13.6適用的桌面控制中心驅動<code>Driver 6.3.40-2</code> (macOS 10.12 - 10.15)。</li>
@@ -124,7 +124,7 @@
 <li>按下[開始] → [開始搜尋]方塊輸入<strong>gpedit.msc</strong> (本機群組原則編輯器) </li>
 <li>開啟本機群組原則 → 點選<strong>使用者設定</strong> → <strong>系統管理範本</strong> </li>
 <li>接下來點右邊<strong>WINDOWS 元件</strong> → <strong>Tablet PC</strong> → <strong>游標</strong> → <strong>關閉畫筆回饋</strong></li>
-<li>出現新視窗 → <strong>選擇已啟用(Enabled)</strong> → 按下[確定]即可 </li>
+<li>點選編輯出現新視窗 → <strong>選擇已啟用(Enabled)</strong> → 按下[確定]即可 </li>
 </ul>
 <p>路徑：使用者設定&gt;系統管理範本&gt;WINDOWS 元件&gt;Tablet PC&gt;游標<br>設定：關閉畫筆回饋</p>
 <p><img src="/%E8%A7%A3%E6%B1%BAWacom-Intuos2%E9%A9%85%E5%8B%95%E5%AE%89%E8%A3%9D/wacomintuosO.JPG" alt="以Photoshop CS4試畫，有時數位筆不順也會變菱形（抖）" loading="lazy"></p>
@@ -196,7 +196,7 @@
   
 <div class="widget tagcloud">
   <div class="entry">
-    <a href="/tags/%E5%A1%97%E9%B4%89%E4%BA%94%E5%9B%9B%E4%B8%89/" style="font-size: 20px; color: #f0c">塗鴉五四三</a> <a href="/tags/Steam/" style="font-size: 9px; color: #39c">Steam</a> <a href="/tags/%E5%8D%B0%E8%A1%A8%E6%A9%9F/" style="font-size: 17.8px; color: #d61fcc">印表機</a> <a href="/tags/%E9%80%B1%E9%82%8A/" style="font-size: 15.6px; color: #ad3dcc">週邊</a> <a href="/tags/%E9%8D%B5%E7%9B%A4/" style="font-size: 11.2px; color: #5c7acc">鍵盤</a> <a href="/tags/APP/" style="font-size: 9px; color: #39c">APP</a> <a href="/tags/%E8%BB%9F%E9%AB%94/" style="font-size: 15.6px; color: #ad3dcc">軟體</a> <a href="/tags/%E9%9F%B3%E6%A8%82%E5%8A%87/" style="font-size: 13.4px; color: #855ccc">音樂劇</a> <a href="/tags/Blog/" style="font-size: 11.2px; color: #5c7acc">Blog</a> <a href="/tags/%E7%B6%B2%E8%B7%AF/" style="font-size: 9px; color: #39c">網路</a> <a href="/tags/Wacom/" style="font-size: 13.4px; color: #855ccc">Wacom</a> <a href="/tags/%E4%BC%BC%E9%A1%8F%E7%B9%AA/" style="font-size: 15.6px; color: #ad3dcc">似顏繪</a> <a href="/tags/%E9%AC%BC%E5%B3%B6%E6%97%A5%E5%B8%B8/" style="font-size: 9px; color: #39c">鬼島日常</a> <a href="/tags/NG/" style="font-size: 13.4px; color: #855ccc">NG</a>
+    <a href="/tags/%E5%A1%97%E9%B4%89%E4%BA%94%E5%9B%9B%E4%B8%89/" style="font-size: 20px; color: #f0c">塗鴉五四三</a> <a href="/tags/%E5%8D%B0%E8%A1%A8%E6%A9%9F/" style="font-size: 17.8px; color: #d61fcc">印表機</a> <a href="/tags/Steam/" style="font-size: 9px; color: #39c">Steam</a> <a href="/tags/%E9%80%B1%E9%82%8A/" style="font-size: 15.6px; color: #ad3dcc">週邊</a> <a href="/tags/%E9%8D%B5%E7%9B%A4/" style="font-size: 11.2px; color: #5c7acc">鍵盤</a> <a href="/tags/%E8%BB%9F%E9%AB%94/" style="font-size: 15.6px; color: #ad3dcc">軟體</a> <a href="/tags/APP/" style="font-size: 9px; color: #39c">APP</a> <a href="/tags/%E9%9F%B3%E6%A8%82%E5%8A%87/" style="font-size: 13.4px; color: #855ccc">音樂劇</a> <a href="/tags/Blog/" style="font-size: 11.2px; color: #5c7acc">Blog</a> <a href="/tags/%E7%B6%B2%E8%B7%AF/" style="font-size: 9px; color: #39c">網路</a> <a href="/tags/Wacom/" style="font-size: 13.4px; color: #855ccc">Wacom</a> <a href="/tags/%E4%BC%BC%E9%A1%8F%E7%B9%AA/" style="font-size: 15.6px; color: #ad3dcc">似顏繪</a> <a href="/tags/%E9%AC%BC%E5%B3%B6%E6%97%A5%E5%B8%B8/" style="font-size: 9px; color: #39c">鬼島日常</a> <a href="/tags/NG/" style="font-size: 13.4px; color: #855ccc">NG</a>
     </div>
   </div>
 
