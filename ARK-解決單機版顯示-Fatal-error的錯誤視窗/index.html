@@ -138,14 +138,6 @@
 </article>
 
 
-<section id="comment">
-  
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  
-</section>
-
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -215,50 +207,6 @@
 <script src="/js/gallery.js"></script>
 
 
-  <script type="text/javascript">
-  var disqus_shortname = 'alinn';
-    var disqus_config = function() {
-      this.page.url = 'https://alinn.mynet.tw/ARK-%E8%A7%A3%E6%B1%BA%E5%96%AE%E6%A9%9F%E7%89%88%E9%A1%AF%E7%A4%BA-Fatal-error%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%A6%96%E7%AA%97/';
-      this.page.identifier = 'ARK-解決單機版顯示-Fatal-error的錯誤視窗/';
-      this.page.title = 'ARK:解決單機版顯示Fatal error的錯誤視窗';
-    };
-  function loadDisqus() {  //新增的loadDisqus()函數
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  }());
-  }  //到此為止將這段程式碼包起來
-  //底下程式碼為新增功能，整段複製貼上即可
-  var runningOnBrowser = typeof window !== "undefined";
-  var isBot =
-      (runningOnBrowser && !("onscroll" in window)) ||
-      (typeof navigator !== "undefined" &&
-          /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(
-              navigator.userAgent
-          ));
-  var supportsIntersectionObserver =
-      runningOnBrowser && "IntersectionObserver" in window;
-  setTimeout(function() {
-      if (!isBot && supportsIntersectionObserver) {
-          var disqus_observer = new IntersectionObserver(
-              function(entries) {
-                  if (entries[0].isIntersecting) {
-                      loadDisqus();
-                      disqus_observer.disconnect();
-                  }
-              },
-              { threshold: [0] }
-          );
-          disqus_observer.observe(document.getElementById("disqus_thread"));
-      } else {
-          loadDisqus();
-      }
-  }, 1);
-  </script>
-  
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
