@@ -109,23 +109,23 @@ a:hover {
   color: #999;
 }
 #header a:hover {
-  color: #666;
+  color: #258fb8;
   text-decoration: none;
 }
-#header h1 {
+#header .title {
   font-weight: normal;
-  font-size: 2.8em;
+  font-size: 1.8rem;
   line-height: 1;
 }
-#header h2 {
+#header .subtitle {
   font-weight: normal;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1;
   margin-top: 10px;
 }
 #header #main-nav {
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-  line-height: 2.8em;
+  line-height: 2.5em;
 }
 #header #main-nav ul {
   list-style: none;
@@ -485,12 +485,6 @@ article footer .tags:before {
   content: '\f02b';
   top: 3px;
   left: 2px;
-}
-article footer .addthis {
-  margin-top: 15px;
-}
-article footer .addthis iframe {
-  margin-top: 0;
 }
 .link-preview .link-area {
   overflow: hidden;
