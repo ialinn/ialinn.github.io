@@ -290,6 +290,7 @@ article .entry h5,
 article .entry h6,
 article .entry .video-container {
   margin-top: 15px;
+  overflow-wrap: break-word;
 }
 article .entry table {
   border-collapse: collapse;
@@ -498,7 +499,7 @@ article footer .tags:before {
 }
 .link-preview .og-title {
   overflow: hidden;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
 }
 .link-preview .og-description {
@@ -510,7 +511,11 @@ article footer .tags:before {
   margin-right: 10px;
 }
 .link-preview .og-image img {
-  max-width: 125px;
+  width: 135px;
+  height: 90px;
+  object-fit: cover;
+  object-position: 5% 40%;
+  pointer-events: none;
 }
 .flex {
   display: -webkit-box;
@@ -710,14 +715,14 @@ article footer .tags:before {
 #footer .rss:hover::before {
   color: #ff8903;
 }
-#footer .twittr::before {
+#footer .toot::before {
   margin: -5px 0 0 65px;
-  content: '\f099';
+  content: '\f2e1';
   color: #999;
   font: 25px FontAwesome;
   position: absolute;
 }
-#footer .twittr:hover::before {
+#footer .toot:hover::before {
   color: #1da1f2;
 }
 #footer .email::before {

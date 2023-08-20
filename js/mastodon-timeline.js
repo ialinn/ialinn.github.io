@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		container_id: 'mt-timeline',
 		container_body_id: 'mt-body',
 		instance_uri: 'https://mastodon.social',
-		user_id: '107966538044390758',
-		profile_name: '@carl0schen',
-		toots_limit: 10,
-		btn_see_more: 'See more posts at Mastodon'
+		user_id: '107966632120608659',
+		profile_name: '@ialinn',
+		toots_limit: 1,
+		btn_see_more: '閱讀其他嘟文→'
 	});
 });
 
