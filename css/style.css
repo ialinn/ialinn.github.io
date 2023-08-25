@@ -723,7 +723,7 @@ article footer .tags:before {
   position: absolute;
 }
 #footer .toot:hover::before {
-  color: #1da1f2;
+  color: #6664ff;
 }
 #footer .email::before {
   margin: -5px 0 0 160px;
