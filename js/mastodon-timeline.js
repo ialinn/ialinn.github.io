@@ -1,5 +1,5 @@
 /**
- * Mastodon embed feed timeline v3.9.0
+ * Mastodon embed feed timeline v3.8.2
  * More info at:
  * https://gitlab.com/idotj/mastodon-embed-feed-timeline
  */
@@ -13,11 +13,8 @@ window.addEventListener("load", () => {
     // Id of the <div> containing the timeline
     container_body_id: "mt-body",
 
-    // Class name for the loading spinner
-    spinner_class: "loading-spinner",
-
     // Preferred color theme: 'light', 'dark' or 'auto'. Default: auto
-    default_theme: "auto",
+    default_theme: "light",
 
     // Your Mastodon instance
     instance_url: "https://mastodon.social",
@@ -69,8 +66,6 @@ window.addEventListener("load", () => {
  * Trigger main function to build the timeline
  */
 const MastodonApi = function (params_) {
-  this.CONTAINER_BODY_ID = params_.container_body_id || "mt-body";
-  this.SPINNER_CLASS = params_.spinner_class || "loading-spinner";
   this.DEFAULT_THEME = params_.default_theme || "auto";
   this.INSTANCE_URL = params_.instance_url;
   this.USER_ID = params_.user_id || "";
@@ -100,7 +95,7 @@ const MastodonApi = function (params_) {
   this.LINK_SEE_MORE = params_.link_see_more;
   this.FETCHED_DATA = {};
 
-  this.mtBodyContainer = document.getElementById(this.CONTAINER_BODY_ID);
+  this.mtBodyContainer = document.getElementById(params_.container_body_id);
 
   this.buildTimeline();
 };
@@ -169,9 +164,6 @@ MastodonApi.prototype.buildTimeline = async function () {
         linkSeeMore
       );
     }
-
-    // Control loading spinners
-    this.manageSpinner();
   }
 
   // Toot interactions
@@ -180,9 +172,7 @@ MastodonApi.prototype.buildTimeline = async function () {
     if (
       e.target.localName == "article" ||
       e.target.offsetParent.localName == "article" ||
-      (e.target.localName == "img" &&
-        e.target.offsetParent.className !== "mt-avatar" &&
-        e.target.offsetParent.className !== "mt-avatar-account")
+      e.target.localName == "img"
     ) {
       openTootURL(e);
     }
@@ -365,23 +355,17 @@ MastodonApi.prototype.assambleToot = function (c, i) {
     avatar =
       '<a href="' +
       c.reblog.account.url +
-      '" class="mt-avatar" rel="nofollow noopener noreferrer" target="_blank">' +
-      '<div class="mt-avatar-image">' +
-      '<div class="mt-avatar-boosted">' +
-      '<img src="' +
+      '" class="mt-avatar mt-avatar-boosted" style="background-image:url(' +
       c.reblog.account.avatar +
-      '" alt="' +
-      c.reblog.account.username +
-      ' avatar" loading="lazy" />' +
-      "</div>" +
-      '<div class="mt-avatar-account">' +
-      '<img src="' +
+      ');" rel="nofollow noopener noreferrer" target="_blank">' +
+      '<div class="mt-avatar mt-avatar-booster" style="background-image:url(' +
       c.account.avatar +
-      '" alt="' +
+      ');">' +
+      "</div>" +
+      '<span class="visually-hidden">' +
       c.account.username +
-      ' avatar" loading="lazy" />' +
-      "</div>" +
-      "</div>" +
+      " avatar" +
+      "</span>" +
       "</a>";
 
     // User name and url
@@ -390,10 +374,8 @@ MastodonApi.prototype.assambleToot = function (c, i) {
       '<a href="' +
       c.reblog.account.url +
       '" rel="nofollow noopener noreferrer" target="_blank">' +
-      (c.reblog.account.display_name
-        ? c.reblog.account.display_name
-        : c.reblog.account.username) +
-      '<span class="visually-hidden"> account</span>' +
+      c.reblog.account.username +
+      '<span class="visually-hidden"> post</span>' +
       "</a>" +
       "</div>";
 
@@ -408,14 +390,13 @@ MastodonApi.prototype.assambleToot = function (c, i) {
     avatar =
       '<a href="' +
       c.account.url +
-      '" class="mt-avatar" rel="nofollow noopener noreferrer" target="_blank">' +
-      '<div class="mt-avatar-image">' +
-      '<img src="' +
+      '" class="mt-avatar" style="background-image:url(' +
       c.account.avatar +
-      '" alt="' +
+      ');" rel="nofollow noopener noreferrer" target="_blank">' +
+      '<span class="visually-hidden">' +
       c.account.username +
-      ' avatar" loading="lazy" />' +
-      "</div>" +
+      " avatar" +
+      "</span>" +
       "</a>";
 
     // User name and url
@@ -424,8 +405,8 @@ MastodonApi.prototype.assambleToot = function (c, i) {
       '<a href="' +
       c.account.url +
       '" rel="nofollow noopener noreferrer" target="_blank">' +
-      (c.account.display_name ? c.account.display_name : c.account.username) +
-      '<span class="visually-hidden"> account</span>' +
+      c.account.username +
+      '<span class="visually-hidden"> post</span>' +
       "</a>" +
       "</div>";
 
@@ -655,11 +636,9 @@ MastodonApi.prototype.placeMedias = function (m, s) {
   const pic =
     '<div class="toot-media ' +
     (spoiler ? "toot-media-spoiler" : "") +
-    " img-ratio14_7 " +
-    this.SPINNER_CLASS +
-    '">' +
+    ' img-ratio14_7 loading-spinner">' +
     (spoiler ? '<button class="spoiler-link">Show content</button>' : "") +
-    '<img src="' +
+    '<img onload="removeSpinner(this)" onerror="removeSpinner(this)" src="' +
     m.preview_url +
     '" alt="' +
     (m.description ? m.description : "") +
@@ -680,9 +659,7 @@ MastodonApi.prototype.placePreviewLink = function (c) {
     c.url +
     '" class="toot-preview-link" target="_blank" rel="noopener noreferrer">' +
     (c.image
-      ? '<div class="toot-preview-image ' +
-        this.SPINNER_CLASS +
-        '"><img src="' +
+      ? '<div class="toot-preview-image"><img onload="removeSpinner(this)" onerror="removeSpinner(this)" src="' +
         c.image +
         '" alt="" loading="lazy" /></div>'
       : '<div class="toot-preview-noImage">📄</div>') +
@@ -737,22 +714,16 @@ MastodonApi.prototype.formatDate = function (d) {
 };
 
 /**
- * Add/Remove event listener for loading spinner
+ * Loading spinner
+ * @param {object} e Image containing the spinner
  */
-MastodonApi.prototype.manageSpinner = function () {
-  // Remove CSS class to container and listener to images
-  const spinnerCSS = this.SPINNER_CLASS;
-  const removeSpinner = function () {
-    this.parentNode.classList.remove(spinnerCSS);
-    this.removeEventListener("load", removeSpinner);
-    this.removeEventListener("error", removeSpinner);
-  };
+const removeSpinner = function (e) {
+  const spinnerCSS = "loading-spinner";
 
-  // Add listener to images
-  this.mtBodyContainer
-    .querySelectorAll(`.${this.SPINNER_CLASS} > img`)
-    .forEach((e) => {
-      e.addEventListener("load", removeSpinner);
-      e.addEventListener("error", removeSpinner);
-    });
+  // Find closest parent container (1st, 2nd or 3rd level)
+  let spinnerContainer = e.closest("." + spinnerCSS);
+
+  if (spinnerContainer) {
+    spinnerContainer.classList.remove(spinnerCSS);
+  }
 };

@@ -1,4 +1,4 @@
-/* Mastodon embed feed timeline v3.9.0 */
+/* Mastodon embed feed timeline v3.8.2 */
 /* More info at: */
 /* https://gitlab.com/idotj/mastodon-embed-feed-timeline */
 
@@ -40,7 +40,7 @@ html[data-theme="dark"] {
   text-decoration: none;
   color: var(--link-color);
 }
-.mt-timeline a:not(.toot-preview-link):hover {
+.mt-timeline a:hover {
   text-decoration: underline;
 }
 .mt-timeline::-webkit-scrollbar {
@@ -62,72 +62,60 @@ html[data-theme="dark"] {
 }
 
 .mt-body {
-  /* padding: 1rem 1.5rem; original */
-  overflow-y: auto; /* add */
+  height: 100%;
+  overflow-y: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
-  text-align: left; /* add */
-}
+  }
+
 .mt-body .invisible {
-  font-size: 0;
-  line-height: 0;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  position: absolute;
+  display: none;
 }
 
 /* Toot container */
 .mt-toot {
-  /* margin: 0.25rem; original */
-  padding: 1rem 0.4rem 0.3rem 4rem;/*文章邊距*/
+  padding: 1rem 6px 0.3rem 65px;
   position: relative;
   min-height: 3.75rem;
-  /* background-color: transparent; original */
-  /* border-bottom: 1px solid var(--line-gray-color); original */
+/* background-color: transparent; 背景文章立體效果 */
+/* border-bottom: 1px solid var(--line-gray-color);每篇文章底線 */
 }
 .mt-toot:hover,
 .mt-toot:focus {
   cursor: pointer;
-  background-color: #f7f7f7; /*背景超連結*/
+  background-color:  #f7f7f7; /*背景超連結*/
 }
 .mt-toot p:last-child {
   margin-bottom: 0;
 }
 
-/* User avatar and name */
+/* User icon */
 .mt-avatar {
+  position: absolute;
+  top: 1rem;/*使用者照片高度預設1rem*/
+  left: 5px;
   width: 3rem;
   height: 3rem;
-  position: absolute;
-  top: 1rem;
-  left: 0.25rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: var(--bg-color);
   border-radius: 50%;/*使用者照片切角度*/
-  overflow: hidden;
 }
-.mt-avatar-image img {
-  width: 100%;
-  height: auto;
+.mt-avatar-boosted {
+  width: 2.5rem;
+  height: 2.5rem;
 }
-.mt-avatar-image .mt-avatar-boosted {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-.mt-avatar-image .mt-avatar-account {
+.mt-avatar-booster {
   width: 1.5rem;
   height: 1.5rem;
   top: 1.5rem;
   left: 1.5rem;
-  position: absolute;
-  border-radius: 0.25rem;
-  overflow: hidden;
 }
 .mt-user {
   display: table;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 .mt-user > a {
   color: var(--content-text) !important;
@@ -165,6 +153,27 @@ html[data-theme="dark"] {
   width: auto;
 }
 
+.mt-error {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 3.5rem);
+  width: calc(100% - 4.5rem);
+  justify-content: center;
+  align-items: center;
+  color: var(--error-text-color);
+  padding: 0.75rem;
+  text-align: center;
+}
+.mt-error-icon {
+  font-size: 2rem;
+}
+.mt-error-message {
+  padding: 1rem 0;
+}
+.mt-error-message hr {
+  color: var(--line-gray-color);
+}
 
 /* Poll */
 .toot-poll {
@@ -291,36 +300,13 @@ html[data-theme="dark"] {
 
 /* Date */
 .toot-date {
-  margin: 0.5rem 0; /* add */
-  font-size: 0.85rem; /* 0.75rem orginal */
-  opacity: 0.5; /* add */
+  margin: 0.5rem auto; /* 日期和文章間距 */
+  font-size: 0.85rem;
+  opacity: 0.5;
   text-align: right;
-}
+  }
 
-/* Error */
-.mt-error {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 3.5rem);
-  width: calc(100% - 4.5rem);
-  justify-content: center;
-  align-items: center;
-  color: var(--error-text-color);
-  padding: 0.75rem;
-  text-align: center;
-}
-.mt-error-icon {
-  font-size: 2rem;
-}
-.mt-error-message {
-  padding: 1rem 0;
-}
-.mt-error-message hr {
-  color: var(--line-gray-color);
-}
-
-/* Loading spinner */
+/* Loading-spinner */
 .mt-body > .loading-spinner {
   position: absolute;
   width: 3rem;
@@ -344,7 +330,7 @@ html[data-theme="dark"] {
   text-align: center;
 }
 
-/* Hidden elements */
+/* Hidden element */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
